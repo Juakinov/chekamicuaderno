@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso: <%= courseName %> - Resoluciones Preu</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos personalizados para scroll y lightbox */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Zoom transitions */
+    #lightbox-img {
+      transition: transform 0.15s ease-out;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-bold text-lg tracking-wide flex items-center gap-1">
+        <span>← Volver</span>
+      </a>
+      <span class="font-bold text-base"><%= courseName %></span>
+      <div class="w-8"></div> <!-- Spacer for balance -->
+    </div>
+    
+    <!-- Selector rápido de semanas (Sticky Subheader) -->
+    <div class="bg-indigo-700 border-t border-indigo-500/30">
+      <div class="max-w-xl mx-auto px-4 py-2 flex items-center gap-2">
+        <label for="semana-select" class="text-xs text-indigo-100 font-semibold shrink-0">Saltar a:</label>
+        <select id="semana-select" onchange="window.location.hash = this.value" 
+          class="bg-indigo-800 text-white text-xs rounded-lg px-2 py-1.5 outline-none border border-indigo-500 focus:ring-1 focus:ring-indigo-300 flex-grow">
+          <option value="">-- Selecciona una Semana --</option>
+          <% weeks.forEach(week => { %>
+            <option value="semana-<%= week.num %>">Semana <%= week.num %>: <%= week.topic %></option>
+          <% }) %>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-xl w-full mx-auto px-4 py-6">
+
+    <!-- Lista de Semanas -->
+    <div class="space-y-8">
+      <% weeks.forEach(week => { %>
+        <section id="semana-<%= week.num %>" class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden scroll-mt-24">
+          
+          <!-- Encabezado de la Semana -->
+          <div class="bg-gradient-to-r from-indigo-50 to-slate-50 p-4 border-b border-slate-100">
+            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              Semana <%= week.num %>
+            </span>
+            <h2 class="text-lg font-bold text-slate-800 mt-1 leading-tight">
+              <%= week.topic %>
+            </h2>
+            
+            <!-- Subtemas Acordeón Simple -->
+            <details class="mt-2 text-xs text-slate-500 group">
+              <summary class="list-none flex items-center gap-1 cursor-pointer select-none font-semibold text-slate-400 hover:text-slate-600 transition">
+                <span>Ver subtemas</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <ul class="list-disc pl-4 mt-2 space-y-1 text-slate-500 leading-relaxed">
+                <% week.subtopics.forEach(sub => { %>
+                  <li><%= sub %></li>
+                <% }) %>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Fotos de Resoluciones -->
+          <div class="p-4">
+            <% if (week.photos.length === 0) { %>
+              <div class="py-8 text-center text-slate-400 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="text-xs italic">Aún no se han subido resoluciones para esta semana.</p>
+              </div>
+            <% } else { %>
+              <div class="space-y-4">
+                <p class="text-xs text-slate-400 font-semibold mb-1 uppercase tracking-wide">📸 Soluciones en Hojas (<%= week.photos.length %>)</p>
+                <div class="grid grid-cols-1 gap-4">
+                  <% week.photos.forEach((photo, idx) => { %>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 shadow-sm relative group">
+                      <!-- Imagen resolucion -->
+                      <img src="<%= photo %>" 
+                        class="w-full object-contain cursor-pointer max-h-[500px]" 
+                        alt="Solución Semana <%= week.num %> - Hoja <%= idx + 1 %>"
+                        onclick="openLightbox('<%= photo %>')">
+                      
+                      <!-- Etiqueta de página -->
+                      <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-xs">
+                        Pág. <%= idx + 1 %>
+                      </div>
+                      
+                      <!-- Botón flotante para ver en grande -->
+                      <button onclick="openLightbox('<%= photo %>')" 
+                        class="absolute top-2 right-2 bg-indigo-600 text-white p-2 rounded-full shadow-lg opacity-90 hover:scale-105 active:scale-95 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                        </svg>
+                      </button>
+                    </div>
+                  <% }) %>
+                </div>
+              </div>
+            <% } %>
+          </div>
+
+        </section>
+      <% }) %>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal (Zoom para celular) -->
+  <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col justify-between">
+    
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center px-4 py-3 text-white bg-black/40 backdrop-blur-xs z-10">
+      <span class="text-sm font-semibold">Visualizador de Solución</span>
+      <button onclick="closeLightbox()" class="text-white hover:text-indigo-400 p-1 rounded-full transition focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Image Container with zoom/pan capabilities -->
+    <div class="flex-grow flex items-center justify-center overflow-hidden relative" 
+         id="lightbox-container"
+         onmousedown="startDrag(event)"
+         onmousemove="drag(event)"
+         onmouseup="endDrag()"
+         onmouseleave="endDrag()"
+         ontouchstart="startTouchDrag(event)"
+         ontouchmove="touchDrag(event)"
+         ontouchend="endDrag()">
+      <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain pointer-events-none" style="transform: scale(1) translate(0px, 0px);">
+    </div>
+
+    <!-- Bottom Controls Bar (Zoom in/out, reset) -->
+    <div class="flex items-center justify-center gap-6 px-4 py-4 text-white bg-black/40 backdrop-blur-xs z-10">
+      <button onclick="zoomOut()" class="bg-indigo-600/80 hover:bg-indigo-600 p-2.5 rounded-full transition active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20 12H4" />
+        </svg>
+      </button>
+      
+      <button onclick="resetZoom()" class="bg-slate-700/80 hover:bg-slate-700 text-xs font-bold px-4 py-2.5 rounded-full uppercase tracking-wider transition active:scale-95">
+        Reajustar
+      </button>
+
+      <button onclick="zoomIn()" class="bg-indigo-600/80 hover:bg-indigo-600 p-2.5 rounded-full transition active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-400">
+    <p>© <%= new Date().getFullYear() %> Resoluciones Preu.</p>
+  </footer>
+
+  <!-- Lightbox Zoom Logic (Vanilla JS, optimized for mobile) -->
+  <script>
+    let currentScale = 1;
+    let isDragging = false;
+    let startX, startY;
+    let translateX = 0, translateY = 0;
+    
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+
+    // Abre el visor en pantalla completa
+    function openLightbox(src) {
+      img.src = src;
+      lightbox.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden'); // Evita scroll detrás
+      resetZoom();
+    }
+
+    // Cierra el visor
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Actualiza la transformación CSS
+    function updateTransform() {
+      img.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+    }
+
+    // Acercar (+)
+    function zoomIn() {
+      currentScale += 0.25;
+      if (currentScale > 4) currentScale = 4; // Máximo zoom
+      updateTransform();
+    }
+
+    // Alejar (-)
+    function zoomOut() {
+      currentScale -= 0.25;
+      if (currentScale < 1) {
+        resetZoom();
+      } else {
+        updateTransform();
+      }
+    }
+
+    // Reajustar zoom
+    function resetZoom() {
+      currentScale = 1;
+      translateX = 0;
+      translateY = 0;
+      updateTransform();
+    }
+
+    // --- Soporte de Drag & Pan (Arrastre para mover la foto con zoom) ---
+    function startDrag(e) {
+      if (currentScale === 1) return; // No mover si no hay zoom
+      isDragging = true;
+      startX = e.clientX - translateX * currentScale;
+      startY = e.clientY - translateY * currentScale;
+    }
+
+    function drag(e) {
+      if (!isDragging) return;
+      translateX = (e.clientX - startX) / currentScale;
+      translateY = (e.clientY - startY) / currentScale;
+      updateTransform();
+    }
+
+    // Soporte táctil para móvil (Arrastre de un solo dedo)
+    function startTouchDrag(e) {
+      if (currentScale === 1) return;
+      if (e.touches.length === 1) {
+        isDragging = true;
+        startX = e.touches[0].clientX - translateX * currentScale;
+        startY = e.touches[0].clientY - translateY * currentScale;
+      }
+    }
+
+    function touchDrag(e) {
+      if (!isDragging) return;
+      if (e.touches.length === 1) {
+        translateX = (e.touches[0].clientX - startX) / currentScale;
+        translateY = (e.touches[0].clientY - startY) / currentScale;
+        updateTransform();
+      }
+    }
+
+    function endDrag() {
+      isDragging = false;
+    }
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>

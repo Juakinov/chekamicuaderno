@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow-md">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-bold text-lg tracking-wide flex items-center gap-2">
+        <span>🎓 Resoluciones Preu (Admin)</span>
+      </a>
+      <a href="/logout" class="bg-indigo-700 hover:bg-indigo-800 text-xs font-semibold px-3 py-1.5 rounded-lg transition">
+        Cerrar Sesión
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-xl w-full mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-slate-800">Cursos Disponibles</h1>
+      <p class="text-sm text-slate-500 mt-1">Selecciona un curso para empezar a subir tus resoluciones semanales.</p>
+    </div>
+
+    <!-- Lista de cursos -->
+    <div class="space-y-4">
+      <% courses.forEach(course => { %>
+        <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex justify-between items-start">
+            <div>
+              <h2 class="text-xl font-bold text-slate-800"><%= course.name %></h2>
+              <p class="text-sm text-slate-500 mt-1">Syllabus completo de 40 semanas.</p>
+            </div>
+            <a href="/admin/curso/<%= course.id %>" 
+              class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-1.5">
+              <span>Gestionar</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    
+    <!-- Info Section for Mobile Upload Convenience -->
+    <div class="mt-8 bg-sky-50 border border-sky-100 rounded-2xl p-4 flex gap-3 text-sky-800 text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M12 5a7 7 0 11-7 7 7 7 0 017-7zm0 1v4m0 4h.01" />
+      </svg>
+      <div>
+        <p class="font-semibold">💡 Tip para subir fotos más rápido</p>
+        <p class="mt-1 leading-relaxed text-sky-700">Puedes abrir esta misma página en el navegador de tu celular conectándote al mismo WiFi de tu casa. Así podrás tomar fotos con tu cámara y subirlas directamente sin tener que pasarlas a la PC.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-400">
+    <p>© <%= new Date().getFullYear() %> Resoluciones Preu. Panel de Administración.</p>
+  </footer>
+
+</body>
+</html>

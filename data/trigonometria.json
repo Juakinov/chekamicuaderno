@@ -1,0 +1,345 @@
+{
+  "courseName": "Trigonometría",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "SISTEMAS DE MEDIDAS ANGULARES",
+      "subtopics": [
+        "Ángulo trigonométrico.",
+        "Sistemas de medidas angulares: Sexagesimal; Centesimal y Radial.",
+        "Conversión entre los tres sistemas; Relación S, C y R."
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "LONGITUD DE UN ARCO DE CIRCUNFERENCIA Y ÁREA DE UN SECTOR CIRCULAR",
+      "subtopics": [
+        "Cálculo de la longitud de un arco de circunferencia.",
+        "Cálculo del área de un sector circular.",
+        "Cálculo del área de un trapecio circular."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "APLICACIÓN DEL CÁLCULO DE UNA LONGITUD DE ARCO",
+      "subtopics": [
+        "Número de vueltas que da una rueda sobre una superficie plana.",
+        "Número de vueltas que da una rueda sobre una superficie circular.",
+        "Poleas y engranajes."
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Sistemas de medidas angulares.",
+        "Longitud de arco y área de un sector circular.",
+        "Número de vueltas y engranajes."
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "RAZONES TRIGONOMÉTRICAS DE UN ÁNGULO AGUDO",
+      "subtopics": [
+        "Definición de las razones trigonométricas en un triángulo rectángulo.",
+        "Razones trigonométricas de ángulos notables.",
+        "Razones trigonométricas recíprocas y de ángulos complementarios."
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "RESOLUCIÓN DE TRIÁNGULOS RECTÁNGULOS",
+      "subtopics": [
+        "Casos de resolución de triángulos rectángulos.",
+        "Ángulos verticales."
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "GEOMETRÍA ANALÍTICA I",
+      "subtopics": [
+        "Plano cartesiano y coordenadas de un punto.",
+        "Distancia entre dos puntos, coordenadas del punto medio de un segmento y división de un segmento en una razón dada.",
+        "Coordenadas del baricentro de un triángulo y área de una región triangular."
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "GEOMETRÍA ANALÍTICA II",
+      "subtopics": [
+        "Ángulo de inclinación de una recta, pendiente de una recta.",
+        "Ecuación de la recta.",
+        "Distancia de un punto a una recta, distancia entre rectas paralelas."
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "RAZONES TRIGONOMÉTRICAS DE UN ÁNGULO EN POSICIÓN NORMAL",
+      "subtopics": [
+        "Definición de las razones trigonométricas de un ángulo en posición normal.",
+        "Signos de las razones trigonométricas.",
+        "Ángulos cuadrantales."
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Razones trigonométricas de un ángulo agudo.",
+        "Geometría analítica.",
+        "Razones trigonométricas de un ángulo en posición normal."
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "IDENTIDADES TRIGONOMÉTRICAS FUNDAMENTALES",
+      "subtopics": [
+        "Identidades trigonométricas por cociente y recíprocas.",
+        "Identidades trigonométricas pitagóricas.",
+        "Identidades trigonométricas auxiliares y propiedades."
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS COMPUESTOS I",
+      "subtopics": [
+        "Seno, coseno y tangente de la suma de dos ángulos.",
+        "Seno, coseno y tangente de la diferencia de dos ángulos."
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS COMPUESTOS II",
+      "subtopics": [
+        "Identidades trigonométricas auxiliares de ángulos compuestos.",
+        "Propiedades de ángulos compuestos."
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "REDUCCIÓN AL PRIMER CUADRANTE",
+      "subtopics": [
+        "Reducción para ángulos positivos menores que una vuelta.",
+        "Reducción para ángulos positivos mayores que una vuelta.",
+        "Reducción para ángulos de la forma (-x)."
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS MÚLTIPLES I",
+      "subtopics": [
+        "Identidades trigonométricas del ángulo doble.",
+        "Identidades trigonométricas auxiliares del ángulo doble.",
+        "Identidades trigonométricas del ángulo mitad."
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS MÚLTIPLES II",
+      "subtopics": [
+        "Identidades trigonométricas del ángulo triple.",
+        "Identidades trigonométricas auxiliares del ángulo triple."
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "TRANSFORMACIONES TRIGONOMÉTRICAS",
+      "subtopics": [
+        "Transformación de suma o diferencia a producto.",
+        "Transformación de producto a suma o diferencia."
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Identidades trigonométricas fundamentales.",
+        "Identidades trigonométricas de ángulos compuestos.",
+        "Identidades trigonométricas de ángulos múltiples."
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS I",
+      "subtopics": [
+        "Teorema de senos.",
+        "Teorema de cosenos."
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS II",
+      "subtopics": [
+        "Teorema de tangentes y teorema de proyecciones.",
+        "Cálculo de la mediana, bisectriz interior."
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "CIRCUNFERENCIA TRIGONOMÉTRICA I",
+      "subtopics": [
+        "Definición del seno de un arco en la C.T.",
+        "Definición del coseno de un arco en la C.T."
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "CIRCUNFERENCIA TRIGONOMÉTRICA II",
+      "subtopics": [
+        "Variación del seno.",
+        "Variación del coseno."
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "CIRCUNFERENCIA TRIGONOMÉTRICA III",
+      "subtopics": [
+        "Definición de la tangente de un arco en la C.T. y su variación.",
+        "Definición de la cotangente de un arco en la C.T. y su variación."
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "CIRCUNFERENCIA TRIGONOMÉTRICA IV",
+      "subtopics": [
+        "Definición de la secante de un arco en la C.T. y su variación.",
+        "Definición de la cosecante de un arco en la C.T. y su variación."
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Seno y coseno de un arco en la C.T.",
+        "Variación del seno y coseno.",
+        "Variación de la tangente."
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS I",
+      "subtopics": [
+        "Cálculo del dominio de una función trigonométrica.",
+        "Cálculo del rango de una función trigonométrica."
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS II",
+      "subtopics": [
+        "Función par, función impar.",
+        "Función periódica.",
+        "Gráfica de la función seno."
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS III",
+      "subtopics": [
+        "Gráfica de la función de la forma: f(x)=Asen(Bx+C)+D; A>0; B>0.",
+        "Gráfica de la función coseno."
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS IV",
+      "subtopics": [
+        "Gráfica de la función tangente y cotangente.",
+        "Gráfica de la función secante y cosecante."
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "REFORZAMIENTO V",
+      "subtopics": [
+        "Dominio y rango de una función trigonométrica.",
+        "Gráfica de la función seno y coseno.",
+        "Gráfica de la función tangente."
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS INVERSAS I",
+      "subtopics": [
+        "Función arco seno.",
+        "Función arco coseno.",
+        "Función arco tangente."
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS INVERSAS II",
+      "subtopics": [
+        "Función arco cotangente.",
+        "Función arco secante.",
+        "Función arco cosecante."
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS INVERSAS III",
+      "subtopics": [
+        "Propiedad 1: F.T(F.T.I(x))=x.",
+        "Propiedad 2: F.T.I(F.T(x))=x."
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "FUNCIONES TRIGONOMÉTRICAS INVERSAS IV",
+      "subtopics": [
+        "Propiedad 3: F.T.I(-x).",
+        "Propiedad 4: arcsenx+arccosx; arctanx+arccotx; arcsecx+arccscx."
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "ECUACIONES E INECUACIONES TRIGONOMÉTRICAS",
+      "subtopics": [
+        "Ecuación trigonométrica elemental y no elemental.",
+        "Solución general de una ecuación trigonométrica elemental.",
+        "Inecuaciones trigonométricas."
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "SECCIONES CÓNICAS I",
+      "subtopics": [
+        "Parábola, definición, elementos.",
+        "Ecuaciones de la parábola."
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "SECCIONES CÓNICAS II",
+      "subtopics": [
+        "Elipse, definición, elementos.",
+        "Ecuaciones de la elipse."
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "SECCIONES CÓNICAS III",
+      "subtopics": [
+        "Hipérbola, definición y elementos.",
+        "Ecuación de la hipérbola."
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "TRANSFORMACIÓN DE UN SISTEMA DE COORDENADAS",
+      "subtopics": [
+        "Traslación de ejes coordenados.",
+        "Rotación de ejes coordenados.",
+        "Eliminación del término xy en una ecuación general de segundo grado de dos variables."
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "SISTEMAS DE COORDENADAS POLARES",
+      "subtopics": [
+        "Conversión de coordenadas polares a rectangulares y viceversa.",
+        "Ecuaciones polares de las cónicas."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "courseName": "Física",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "ANÁLISIS VECTORIAL",
+      "subtopics": [
+        "Magnitudes físicas (magnitud escalar, vectorial).",
+        "Vectores: concepto, módulo, dirección. Método del polígono.",
+        "Método del paralelogramo (poner dato del coseno de ángulos notables).",
+        "Descomposición rectangular, vector unitario (en el plano)."
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "CINEMÁTICA I",
+      "subtopics": [
+        "Elementos del movimiento mecánico.",
+        "Movimiento rectilíneo uniforme (MRU). Sonido solo con eco sin tren de onda.",
+        "Movimiento rectilíneo uniformemente variado (MRUV), sin números de Galileo."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "CINEMÁTICA II",
+      "subtopics": [
+        "Movimiento vertical de caída libre (MVCL). (Un problema con método vectorial) (con número de Galileo).",
+        "Movimiento parabólico de caída libre (MPCL)."
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Reforzamiento de cinemática (incluye rapidez y velocidad media, métodos vectoriales) (9 problemas básicos, 3 problemas intermedios)."
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "ESTÁTICA I",
+      "subtopics": [
+        "Tercera ley de Newton, fuerzas usuales (sin fuerza resultante).",
+        "Diagrama de cuerpo libre.",
+        "Primera condición de equilibrio (solo fuerzas paralelas).",
+        "Método del triángulo de fuerzas solo superficies lisas (un problema que solo salga con concurrencia).",
+        "Equilibrio con descomposición rectangular solo superficies lisas."
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "ESTÁTICA II",
+      "subtopics": [
+        "Fuerza de rozamiento estático.",
+        "Fuerza de rozamiento cinético.",
+        "Momento de una fuerza y momento resultante.",
+        "Segunda condición de equilibrio (incluir con rozamiento)."
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "DINÁMICA I",
+      "subtopics": [
+        "Primera ley de Newton.",
+        "Segunda ley de Newton (sin poleas móviles)."
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "DINÁMICA II",
+      "subtopics": [
+        "MCU (rapidez angular, velocidad tangencial, aceleración centrípeta) (problema con 3 enunciados).",
+        "Dinámica circunferencial."
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Reforzamiento de estática y dinámica."
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "TRABAJO MECÁNICO Y ENERGÍA MECÁNICA",
+      "subtopics": [
+        "Trabajo mecánico de una fuerza constante.",
+        "Trabajo neto.",
+        "Trabajo mecánico de una fuerza variable.",
+        "Energía cinética, energía potencial gravitatoria y energía potencial elástica."
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "ENERGÍA MECÁNICA II",
+      "subtopics": [
+        "Relación trabajo neto-energía cinética.",
+        "Relación entre trabajo y energía mecánica.",
+        "Conservación de la energía mecánica.",
+        "Potencia mecánica."
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "IMPULSO Y CANTIDAD DE MOVIMIENTO I",
+      "subtopics": [
+        "Cantidad de movimiento (unidimensional).",
+        "Impulso.",
+        "Relación entre el impulso y la cantidad de movimiento."
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "IMPULSO Y CANTIDAD DE MOVIMIENTO II",
+      "subtopics": [
+        "Conservación de la cantidad de movimiento de un sistema (incluir conservación de energía).",
+        "Centro de masa de un sistema de partículas (solo de cálculo)."
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "GRAVITACIÓN",
+      "subtopics": [
+        "Leyes de Kepler.",
+        "Leyes de gravitación universal, cálculo de la aceleración de la gravedad."
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Reforzamiento de trabajo-energía mecánica, cantidad de movimiento, gravitación."
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "OSCILACIONES I",
+      "subtopics": [
+        "Descripción cinemática y dinámica del MAS.",
+        "Ecuaciones del MAS (sin energía del MAS)."
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "OSCILACIONES II",
+      "subtopics": [
+        "Energía mecánica en el MAS.",
+        "Péndulo simple (sin ecuaciones de posición y velocidad angular)."
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "ONDAS MECÁNICAS",
+      "subtopics": [
+        "Ondas mecánicas. Clasificación (transversales y longitudinales).",
+        "Rapidez de la onda (incluir en cuerda tensa).",
+        "Función de onda."
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "FENÓMENOS ONDULATORIOS",
+      "subtopics": [
+        "Reflexión, refracción e interferencia (problema de dos cuerdas atadas donde se da la reflexión y refracción, realizar pregunta teórica con 3 enunciados).",
+        "Ondas estacionarias (frecuencia y ecuación de la onda estacionaria).",
+        "Sonido."
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "HIDROSTÁTICA I",
+      "subtopics": [
+        "Presión.",
+        "Presión hidrostática.",
+        "Ley fundamental de la hidrostática. Vasos comunicantes."
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "HIDROSTÁTICA II",
+      "subtopics": [
+        "Principio de Pascal.",
+        "Principio de Arquímedes - Empuje.",
+        "Peso aparente."
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "FENÓMENOS TÉRMICOS I",
+      "subtopics": [
+        "Energía interna, concepto de calor y transmisión de calor.",
+        "Temperatura, cambio de temperatura, problema con equivalente mecánico del calor."
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "FENÓMENOS TÉRMICOS II",
+      "subtopics": [
+        "Cambio de fase.",
+        "Dilatación térmica."
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "TERMODINÁMICA I",
+      "subtopics": [
+        "Primera ley de la termodinámica.",
+        "Procesos termodinámicos."
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "TERMODINÁMICA II",
+      "subtopics": [
+        "Ciclos termodinámicos y eficiencia.",
+        "Máquinas térmicas.",
+        "Ciclo de Carnot."
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Reforzamiento de oscilaciones, hidrostática, fenómenos térmicos y termodinámica."
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "ELECTROSTÁTICA I",
+      "subtopics": [
+        "Cuantización y conservación de la carga eléctrica.",
+        "Ley de Coulomb (incluye constante dieléctrica) y principio de superposición."
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "ELECTROSTÁTICA II",
+      "subtopics": [
+        "Intensidad de campo eléctrico, líneas de fuerza.",
+        "Campo eléctrico homogéneo."
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "ELECTROSTÁTICA III",
+      "subtopics": [
+        "Energía potencial electrostática.",
+        "Potencial eléctrico.",
+        "Trabajo del campo eléctrico sobre una partícula electrizada y del agente externo.",
+        "Diferencia de potencial en campo eléctrico homogéneo."
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "ELECTRODINÁMICA I",
+      "subtopics": [
+        "Corriente eléctrica.",
+        "Resistencia eléctrica (ley de Poulliet).",
+        "Ley de Ohm.",
+        "Resistencia equivalente (asociaciones simples de resistencias)."
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "ELECTRODINÁMICA II",
+      "subtopics": [
+        "Problemas más complejos de asociación de resistencias.",
+        "Fuerza electromotriz, fuentes pasivas y activas, ley de Ohm generalizada.",
+        "Leyes de Kirchhoff."
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "ELECTRODINÁMICA III",
+      "subtopics": [
+        "Instrumentos de medición eléctrica.",
+        "Potencia eléctrica - efecto Joule.",
+        "Eficiencia de una fuente."
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "CONDENSADORES",
+      "subtopics": [
+        "Capacidad eléctrica y asociación de capacitores (sin dieléctrico).",
+        "Circuitos capacitivos.",
+        "Energía en condensadores."
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "ELECTROMAGNETISMO I",
+      "subtopics": [
+        "Magnetismo y experiencia de Oersted.",
+        "Ley de Biot-Savart en conductores rectilíneos.",
+        "Ley de Biot-Savart en espira circular (uno fórmula general y otro con dos espiras en planos perpendiculares), solenoide."
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "ELECTROMAGNETISMO II",
+      "subtopics": [
+        "Fuerza magnética sobre una partícula electrizada.",
+        "Fuerza magnética sobre un conductor.",
+        "Torque con fuerza magnética."
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "ELECTROMAGNETISMO III",
+      "subtopics": [
+        "Flujo magnético (realizar pregunta de 3 enunciados).",
+        "Ley de Faraday.",
+        "Ley de Lenz."
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "ONDAS ELECTROMAGNÉTICAS",
+      "subtopics": [
+        "Características de las ondas electromagnéticas.",
+        "Ecuación de la OEM.",
+        "Rapidez de la OEM, intensidad de la OEM.",
+        "Espectro electromagnético."
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "ÓPTICA GEOMÉTRICA I",
+      "subtopics": [
+        "Reflexión de la luz.",
+        "Espejos planos (con formación de imagen).",
+        "Espejos esféricos (cóncavo y convexo)."
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "ÓPTICA GEOMÉTRICA II",
+      "subtopics": [
+        "Refracción de la luz, ley de Snell.",
+        "Ángulo límite.",
+        "Lentes convergentes.",
+        "Lentes divergentes.",
+        "Ecuación del fabricante."
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "FÍSICA MODERNA",
+      "subtopics": [
+        "Potencia e intensidad de radiación.",
+        "Efecto fotoeléctrico.",
+        "Rayos X (problema de 3 enunciados)."
+      ]
+    }
+  ]
+}

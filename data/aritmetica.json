@@ -1,0 +1,363 @@
+{
+  "courseName": "Aritmética",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "RAZONES Y PROPORCIONES I",
+      "subtopics": [
+        "Definición de razón",
+        "Clases de razón: aritmética y geométrica",
+        "Interpretación de las razones",
+        "Homogenización de 2 relaciones con término común"
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "RAZONES Y PROPORCIONES II",
+      "subtopics": [
+        "Aplicación de las razones: En problemas de edades, en problemas de reuniones y en problemas de mezclas",
+        "Definición de la serie de razones geométricas equivalentes",
+        "Propiedades de la S.R.G.E."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "RAZONES Y PROPORCIONES III",
+      "subtopics": [
+        "S.R.G.E. continua",
+        "Definición de proporción",
+        "Clases de proporción (aritmética y geométrica)",
+        "Tipos de proporción (discreta y continua)"
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "MAGNITUDES PROPORCIONALES I",
+      "subtopics": [
+        "Definición de magnitud",
+        "Definición de cantidad",
+        "Relaciones entre magnitudes: Directamente proporcional (DP) e inversamente proporcional (IP)",
+        "Propiedades de las magnitudes"
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "MAGNITUDES PROPORCIONALES II",
+      "subtopics": [
+        "Reparto proporcional",
+        "Regla de compañía",
+        "Problemas de obras"
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "REGLA DEL TANTO POR CIENTO I",
+      "subtopics": [
+        "Definición de tanto por ciento y porcentaje",
+        "Equivalencias importantes",
+        "Operaciones con el tanto por ciento",
+        "Descuentos sucesivos y aumentos sucesivos"
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "REGLA DEL TANTO PORCIENTO II Y REGLA DE MEZCLA I",
+      "subtopics": [
+        "Aplicaciones comerciales",
+        "Definición de mezcla",
+        "Cálculo del precio medio, aplicación de ganancia y pérdida aparente"
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "REGLA DE MEZCLA II",
+      "subtopics": [
+        "Mezcla alcohólica: Cálculo del grado medio, aplicación de ganancia y pérdida aparente",
+        "Aleación: Ley y liga de una aleación. Cálculo de la ley media, aplicación de ganancia y pérdida aparente"
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Razones y proporciones",
+        "Magnitudes proporcionales",
+        "Regla del tanto por ciento",
+        "Regla de mezcla"
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "REGLA DE INTERÉS I",
+      "subtopics": [
+        "Definición de interés",
+        "Elementos de la regla de interés",
+        "Clase de interés: Interés simple"
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "REGLA DE INTERÉS II",
+      "subtopics": [
+        "Clase de interés: Interés compuesto",
+        "Clase de interés: Interés Continuo"
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "TEORÍA DE CONJUNTOS I",
+      "subtopics": [
+        "Noción de conjunto",
+        "Relación de pertenencia",
+        "Determinación de un conjunto",
+        "Cardinal de un conjunto",
+        "Relación entre conjuntos: inclusión, igualdad y disjuntos"
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "TEORÍA DE CONJUNTOS II",
+      "subtopics": [
+        "Conjuntos especiales: vacío, unitario, universal y conjunto potencia",
+        "Operaciones entre conjunto: unión, intersección, diferencia, diferencia simétrica y complemento",
+        "Leyes del Álgebra de conjunto (De la diferencia, De Morgan y Absorción)"
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "TEORÍA DE NUMERACIÓN I",
+      "subtopics": [
+        "Número, numeral, cifras (significativas y no significativas), Principio del orden y de la base",
+        "Representación literal de los numerales, conteo de los numerales y numeral capicúa",
+        "Descomposición polinómica: cifra por cifra"
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "TEORÍA DE NUMERACIÓN II",
+      "subtopics": [
+        "Descomposición por bloques",
+        "Cambio de base",
+        "Propiedades: Numeral de cifra máxima e intervalo en la cual se encuentra un numeral"
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "ESTADÍSTICA I",
+      "subtopics": [
+        "Definición de estadística. Términos comunes: población, muestra y variable (cuantitativa discreta y continua; cualitativa)",
+        "Organización y presentación de datos: tabla de distribución de frecuencia para variable cuantitativa continua y discreta"
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "ESTADÍSTICA II",
+      "subtopics": [
+        "Representación gráfica: histograma, diagrama escalonado y diagrama circular",
+        "Medidas de tendencia central para datos no clasificados (media, mediana y moda)"
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "ESTADÍSTICA III",
+      "subtopics": [
+        "Medidas de tendencia central para datos clasificados (media, mediana y moda)",
+        "Medidas de dispersión para datos no clasificados (varianza y desviación estándar)"
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Regla de interés",
+        "Teoría de conjuntos",
+        "Teoría de numeración",
+        "Estadística"
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "ANÁLISIS COMBINATORIO I",
+      "subtopics": [
+        "Principio de adición y principio de multiplicación",
+        "Permutación lineal"
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "ANÁLISIS COMBINATORIO II",
+      "subtopics": [
+        "Permutación con elementos repetidos",
+        "Permutación circular",
+        "Combinación y propiedades"
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "PROBABILIDAD I",
+      "subtopics": [
+        "Experimento aleatorio, espacio muestral y evento",
+        "Álgebra de eventos. Definición clásica de probabilidad y propiedades"
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "PROBABILIDAD II",
+      "subtopics": [
+        "Eventos independientes",
+        "Probabilidad condicional",
+        "Definición de variable aleatoria discreta. Función de probabilidad y esperanza matemática"
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "OPERACIONES FUNDAMENTALES I",
+      "subtopics": [
+        "Adición en el sistema decimal y en otras bases",
+        "Sustracción en el sistema decimal y en otras bases. Propiedad",
+        "Complemento aritmético de un número"
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "OPERACIONES FUNDAMENTALES II",
+      "subtopics": [
+        "Multiplicación en el sistema decimal y en otras bases. Suma de productos parciales",
+        "División entera: división exacta, inexacta. Propiedades de la división entera inexacta"
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "TEORÍA DE DIVISIBILIDAD I",
+      "subtopics": [
+        "Divisibilidad y multiplicidad",
+        "Representación de los no múltiplos",
+        "Principios de Divisibilidad: Operaciones con múltiplos de un mismo módulo"
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "TEORÍA DE DIVISIBILIDAD II",
+      "subtopics": [
+        "Principios de Divisibilidad: Múltiplos de varios módulos",
+        "Principios de Divisibilidad: Principio de Arquímedes",
+        "Restos potenciales"
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "TEORÍA DE DIVISIBILIDAD III",
+      "subtopics": [
+        "Criterios de Divisibilidad en base 10 (2; 4; 8; 5; 25; 125; 3; 9; 11; 7 y 13)"
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Análisis combinatorio",
+        "Probabilidades",
+        "Operaciones fundamentales",
+        "Teoría de divisibilidad"
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "CLASIFICACIÓN DE LOS ENTEROS POSITIVOS I",
+      "subtopics": [
+        "Números simples y números compuestos. Propiedades de los números primos. Algoritmo para determinar si es primo",
+        "Teorema fundamental de la aritmética",
+        "Clasificación por grupos: Números primos entre sí (PESI) y PESI 2 a 2"
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "CLASIFICACIÓN DE LOS ENTEROS POSITIVOS II",
+      "subtopics": [
+        "Propiedades de PESI",
+        "Exponente de un número primo en la descomposición canónica de un número factorial",
+        "Estudio de los divisores de un número entero positivo: cantidad de divisores"
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "CLASIFICACIÓN DE LOS ENTEROS POSITIVOS III",
+      "subtopics": [
+        "Estudio de los divisores: suma de divisores",
+        "Estudio de los divisores: suma de inversas de los divisores de un número",
+        "Función de Euler"
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "MCD Y MCM I",
+      "subtopics": [
+        "Definición del MCD y determinación de divisores comunes",
+        "Definición del MCM y determinación de múltiplos comunes",
+        "Cálculo del MCD y MCM por descomposición simultánea y por descomposición canónica"
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "MCD Y MCM II",
+      "subtopics": [
+        "Cálculo del MCD por divisiones sucesivas o algoritmo de Euclides",
+        "Propiedades"
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "POTENCIACIÓN",
+      "subtopics": [
+        "Definición de potenciación. Teorema fundamental",
+        "Criterios de inclusión y exclusión de cuadrados y cubos perfectos"
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "RADICACIÓN",
+      "subtopics": [
+        "Definición de radicación",
+        "Casos particulares: Raíz cuadrada y raíz cúbica (exacta, inexacta)",
+        "Propiedades de la raíz cuadrada y raíz cúbica inexacta"
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Clasificación de los números enteros positivos",
+        "MCD y MCM",
+        "Potenciación",
+        "Radicación"
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "NÚMEROS RACIONALES I",
+      "subtopics": [
+        "Números racionales como clase de equivalencia. Representante canónico",
+        "Definición del conjunto de los números racionales. Densidad de un conjunto",
+        "Fracciones: definición y clasificación"
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "NÚMEROS RACIONALES II Y NÚMEROS AVALES I",
+      "subtopics": [
+        "Fracción Equivalente. Propiedad de las fracciones",
+        "Definición de los números avales. Descomposición polinómica",
+        "Clasificación: Número aval exacto"
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "NÚMEROS AVALES II",
+      "subtopics": [
+        "Clasificación: Número aval inexacto periódico puro",
+        "Clasificación: Número aval inexacto periódico mixto",
+        "Cambio de base e igualdad de avales"
+      ]
+    }
+  ]
+}

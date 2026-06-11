@@ -1,0 +1,343 @@
+{
+  "courseName": "Geometría",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "ÁNGULO Y ÁNGULOS ENTRE RECTAS PARALELAS",
+      "subtopics": [
+        "Conceptos elementales (punto, recta y plano), definición de Ángulo, bisectriz de un ángulo, clasificación de ángulos.",
+        "Ángulos determinados por dos rectas paralelas y una recta secante. Correspondientes, conjugados, alternos internos."
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "TRIÁNGULOS I",
+      "subtopics": [
+        "Definición y elementos asociados, teoremas fundamentales.",
+        "Teoremas adicionales."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "TRIÁNGULOS II",
+      "subtopics": [
+        "Clasificación (según sus lados y ángulos).",
+        "Líneas notables (ceviana, mediana, altura, bisectriz, mediatriz).",
+        "Ángulos entre bisectrices."
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "CONGRUENCIA DE TRIÁNGULOS",
+      "subtopics": [
+        "Definición.",
+        "Tres criterios de la congruencia."
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "APLICACIONES DE LA CONGRUENCIA DE TRIÁNGULOS I",
+      "subtopics": [
+        "Teorema de la bisectriz.",
+        "Teorema de la mediatriz.",
+        "Teoremas en los triángulos isósceles."
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "APLICACIONES DE LA CONGRUENCIA DE TRIÁNGULOS II",
+      "subtopics": [
+        "Teorema de la base media.",
+        "Teorema de la mediana relativa a la hipotenusa.",
+        "Triángulos rectángulos notables (53°/2, 37°/2, 14° y 76°, 15° y 75°)."
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Triángulos (ángulo entre bisectrices).",
+        "Congruencia de triángulos.",
+        "Aplicaciones de la congruencia."
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "POLÍGONOS",
+      "subtopics": [
+        "Definición, clasificación convexo y no convexo.",
+        "Teoremas."
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "CUADRILÁTEROS I",
+      "subtopics": [
+        "Nociones de Simetría.",
+        "Trapezoide (simétrico y asimétrico), Trapecio (isósceles, escaleno)."
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "CUADRILÁTEROS II",
+      "subtopics": [
+        "Teoremas en el trapecio.",
+        "Paralelogramo, romboide, rectángulo, cuadrado y rombo."
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "CIRCUNFERENCIA I: ÁNGULOS ASOCIADOS A LA CIRCUNFERENCIA",
+      "subtopics": [
+        "Ángulo central, ángulo inscrito, ángulo semi inscrito.",
+        "Ángulo interior, ángulo exterior, ángulo exinscrito."
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "CIRCUNFERENCIA II: TEOREMAS EN LA CIRCUNFERENCIA",
+      "subtopics": [
+        "Teoremas fundamentales para los elementos asociados de la circunferencia, cuerdas, rectas tangentes, rectas secantes."
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "CIRCUNFERENCIA III: POSICIONES RELATIVAS ENTRE DOS CIRCUNFERENCIAS",
+      "subtopics": [
+        "Tangentes interiores, tangentes exteriores, secantes, exteriores, concéntricas e interior.",
+        "Ángulo entre dos circunferencias."
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "CUADRILÁTERO INSCRITO E INSCRIPTIBLE",
+      "subtopics": [
+        "Cuadrilátero inscrito en una circunferencia.",
+        "Cuadrilátero inscriptible a una circunferencia.",
+        "Teoremas de Poncelet y Pithot."
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "PUNTOS NOTABLES I",
+      "subtopics": [
+        "Baricentro.",
+        "Incentro.",
+        "Excentro."
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "PUNTOS NOTABLES II",
+      "subtopics": [
+        "Ortocentro.",
+        "Circuncentro.",
+        "Recta de Euler."
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Circunferencia.",
+        "Puntos notables."
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "PROPORCIONALIDAD DE SEGMENTOS",
+      "subtopics": [
+        "Teorema de Thales, corolarios de Thales.",
+        "Teorema de la bisectriz interior y exterior.",
+        "Teorema del incentro, teorema de Menelao y Ceva."
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "SEMEJANZA DE TRIÁNGULOS",
+      "subtopics": [
+        "Cuaterna armónica.",
+        "Tres criterios de semejanza.",
+        "Teoremas de semejanza."
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "RELACIONES MÉTRICAS I",
+      "subtopics": [
+        "Relaciones métricas en la circunferencia.",
+        "Relaciones métricas en el triángulo rectángulo."
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "RELACIONES MÉTRICAS II",
+      "subtopics": [
+        "Teorema de las proyecciones de dos lados.",
+        "Teorema de Euclides.",
+        "Cálculo de líneas notables."
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "RELACIONES MÉTRICAS III",
+      "subtopics": [
+        "Teorema de Euler.",
+        "Teorema de Ptolomeo, Chadú, Packein, Faure y Viette.",
+        "Teorema de Marlen."
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Semejanza de triángulos.",
+        "Relaciones métricas I y II.",
+        "Relaciones métricas III."
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "POLÍGONOS REGULARES I",
+      "subtopics": [
+        "Introducción a los polígonos regulares, triángulo equilátero, cuadrado y hexágono regular.",
+        "Octágono regular y dodecágono regular."
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "POLÍGONOS REGULARES II",
+      "subtopics": [
+        "Pentágono regular (sección áurea).",
+        "Decágono regular y relaciones entre l5, l6 y l10."
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "ÁREAS DE REGIONES TRIANGULARES",
+      "subtopics": [
+        "Cálculo de áreas de regiones triangulares.",
+        "Razón de áreas de regiones triangulares."
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "ÁREAS DE REGIONES CUADRANGULARES",
+      "subtopics": [
+        "Cálculo de áreas de regiones cuadrangulares.",
+        "Razón de áreas de regiones cuadrangulares."
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "ÁREAS DE REGIONES CIRCULARES",
+      "subtopics": [
+        "Cálculo del área de un círculo.",
+        "Cálculo de áreas de partes notables de un círculo.",
+        "Conjunto convexo y no convexo."
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "GEOMETRÍA DEL ESPACIO I",
+      "subtopics": [
+        "Posiciones relativas entre rectas y planos.",
+        "Recta perpendicular al plano, ángulo entre recta y plano.",
+        "Teorema de las tres perpendiculares.",
+        "Ángulo entre rectas alabeadas."
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "GEOMETRÍA DEL ESPACIO II",
+      "subtopics": [
+        "Ángulo diedro.",
+        "Planos perpendiculares.",
+        "Distancia entre rectas alabeadas."
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Áreas de regiones poligonales y circulares.",
+        "Geometría del espacio I y II."
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "ÁNGULO TRIEDRO",
+      "subtopics": [
+        "Definición, clasificación de los triedros.",
+        "Teoremas en los triedros.",
+        "Triedro polar."
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "POLIEDROS Y POLIEDROS REGULARES I",
+      "subtopics": [
+        "Introducción de los poliedros, teorema de EULER.",
+        "Tetraedro regular, hexaedro regular."
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "POLIEDROS REGULARES II",
+      "subtopics": [
+        "Octaedro regular, dodecaedro regular e icosaedro regular.",
+        "Poliedros conjugados."
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "PRISMA Y TRONCO DE PRISMA",
+      "subtopics": [
+        "Prisma oblicuo y regular.",
+        "Paralelepípedo, clasificación.",
+        "Tronco de prisma recto y oblicuo."
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "CILINDRO Y TRONCO DE CILINDRO",
+      "subtopics": [
+        "Cilindro circular recto.",
+        "Tronco de cilindro de sección recta circular."
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "PIRÁMIDE Y TRONCO DE PIRÁMIDE",
+      "subtopics": [
+        "Pirámide oblicua y recta.",
+        "Pirámide regular.",
+        "Pirámides semejantes, tronco de pirámide regular."
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "CONO Y TRONCO DE CONO",
+      "subtopics": [
+        "Cono de revolución.",
+        "Tronco de cono circular recto."
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "ESFERA",
+      "subtopics": [
+        "Superficie esférica y partes notables.",
+        "Esfera y partes notables."
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "TEOREMA DE PAPPUS",
+      "subtopics": [
+        "Área de la superficie generada.",
+        "Volumen del sólido generado."
+      ]
+    }
+  ]
+}

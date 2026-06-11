@@ -1,0 +1,395 @@
+{
+  "courseName": "Química",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "MATERIA",
+      "subtopics": [
+        "Concepto de química; concepto de materia y características.",
+        "Clasificación de la materia según su composición: sustancia pura simple (alótropos del carbono y oxígeno) y compuesta.",
+        "Concepto de mezcla, clasificación de mezcla según su composición (homogénea y heterogénea).",
+        "Concepto de fenómeno, clasificación de fenómenos (físicos y químicos)."
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "ESTRUCTURA ATÓMICA",
+      "subtopics": [
+        "Propiedades físicas y químicas. Propiedades extensivas e intensivas.",
+        "Concepto de átomo, partes: núcleo y zona extranuclear. Partículas subatómicas fundamentales. Núclido, número de masa, número atómico.",
+        "Isótopos (propiedades físicas y químicas), iones monoatómicos (catión y anión, isoelectrónicos)."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "MECÁNICA CUÁNTICA",
+      "subtopics": [
+        "Teoría cuántica de Max Planck.",
+        "Hipótesis de Louis de Broglie (descripción cualitativa).",
+        "Principio de incertidumbre de Heisenberg.",
+        "Ecuación de onda de Schrödinger (cualitativo) función de onda, concepto de orbital."
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "ESTRUCTURA ELECTRÓNICA DEL ÁTOMO",
+      "subtopics": [
+        "Descripción de los números cuánticos para el electrón y el orbital (tipos).",
+        "Notación cuántica de un subnivel de energía y de un orbital.",
+        "Energía relativa de un subnivel."
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "CONFIGURACIÓN ELECTRÓNICA",
+      "subtopics": [
+        "Principio de Aufbau o de construcción progresiva (regla de Moller).",
+        "Principio de exclusión de Pauli, principio de máxima multiplicidad (regla de Hund).",
+        "Anomalías del cobre y cromo. Caso particular (Paladio).",
+        "Paramagnetismo y diamagnetismo (cualitativo)."
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "TABLA PERIÓDICA MODERNA",
+      "subtopics": [
+        "Antecedente: fundamentos de intento de ordenamiento (Mendeléiev y Meyer); ley periódica moderna de Moseley.",
+        "Descripción de la tabla periódica: Periodo (características y número de periodo) y grupo (características y número de grupo).",
+        "Ubicación de un elemento en la tabla periódica.",
+        "Metales y no metales (principales propiedades físicas y químicas), metaloides (características)."
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "PROPIEDADES PERIÓDICAS DE LOS ELEMENTOS",
+      "subtopics": [
+        "Radio atómico y radio iónico. Tendencia general en la TPM.",
+        "Energía de ionización (primera y segunda). Tendencia general en la TPM.",
+        "Afinidad electrónica (tendencia general en la TPM) y anomalías.",
+        "Electronegatividad, carácter metálico y no metálico. Tendencia general en la TPM."
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Materia (clasificación, fenómenos y propiedades).",
+        "Estructura atómica, estructura electrónica y mecánica cuántica.",
+        "Números cuánticos y configuración electrónica.",
+        "Tabla periódica (ubicación de un elemento, propiedades físicas y químicas, propiedades periódicas)."
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "ENLACE IÓNICO Y ENLACE METÁLICO",
+      "subtopics": [
+        "Concepto de enlace químico, electrones de valencia, notación Lewis y regla del octeto.",
+        "Enlace iónico, estructura de Lewis de los compuestos iónicos.",
+        "Propiedades principales de los compuestos iónicos.",
+        "Enlace metálico, modelo del mar de electrones, propiedades principales de los metales."
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "ENLACE COVALENTE I",
+      "subtopics": [
+        "Concepto de enlace covalente (teoría del electrón de valencia: enlace sigma y enlace pi).",
+        "Estructura de Lewis de especies moleculares (reglas para la construcción de la estructura de una molécula), excepciones a la regla del octeto.",
+        "Clasificación del enlace covalente: según la cantidad de pares de electrones compartidos (simple y múltiple)."
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "ENLACE COVALENTE II",
+      "subtopics": [
+        "Clasificación del enlace covalente: según los electrones aportados al par enlazante (enlace normal y enlace coordinado o dativo).",
+        "Clasificación del enlace covalente: según la diferencia de electronegatividades (enlace covalente apolar y polar). Momento dipolar.",
+        "Resonancia en moléculas y iones poliatómicos."
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "HIBRIDACIÓN Y GEOMETRÍA MOLECULAR",
+      "subtopics": [
+        "Concepto de hibridación, orbitales híbridos tipos sp, sp2, sp3.",
+        "Hibridación en moléculas con octeto expandido.",
+        "Geometría molecular (según el tipo de orbital híbrido del átomo central)."
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "FUERZAS INTERMOLECULARES",
+      "subtopics": [
+        "Polaridad de moléculas: molécula polar y apolar, momento dipolar resultante.",
+        "Fuerzas de Van der Waals (Dipolo-dipolo y London).",
+        "Enlace puente de hidrógeno."
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "NOMENCLATURA INORGÁNICA I",
+      "subtopics": [
+        "Formulación química de un compuesto, función química y grupo funcional.",
+        "Número de oxidación. Reglas para determinar el número de oxidación.",
+        "Sistema de nomenclatura: Sistemática, Stock y clásica.",
+        "Obtención, formulación y nomenclatura: función óxido y clasificación (básico y ácido), función hidróxido."
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "NOMENCLATURA INORGÁNICA II",
+      "subtopics": [
+        "Ácidos (hidrácidos y oxácidos).",
+        "Iones: catión y anión (derivados de los hidrácidos y oxoácidos).",
+        "Sales haloideas y oxisales, sales ácidas y sales hidratadas."
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "DIAGRAMA DE FASES Y ESTADO LÍQUIDO",
+      "subtopics": [
+        "Concepto de fase. Descripción del diagrama de fases del H2O y CO2.",
+        "Concepto de estado líquido y propiedades generales.",
+        "Viscosidad, tensión superficial y capilaridad (factores que influyen para cada caso).",
+        "Presión de vapor y temperatura de ebullición (factores que influyen para cada caso)."
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Enlace químico: iónico, metálico y covalente.",
+        "Geometría molecular y polaridad de moléculas.",
+        "Fuerzas intermoleculares.",
+        "Diagrama de fases y estado líquido.",
+        "Nomenclatura inorgánica."
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "CÁLCULOS EN QUÍMICA",
+      "subtopics": [
+        "Masa y unidad de masa de partículas subatómicas (uma), peso atómico y peso fórmula.",
+        "Mol, masa molar, número de moles.",
+        "Interpretación de una fórmula química, composición centesimal.",
+        "Fórmula empírica y fórmula molecular (sin reacciones químicas)."
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "ESTADO GASEOSO I",
+      "subtopics": [
+        "Concepto de estado gaseoso, propiedades generales de los gases (microscópicas y macroscópicas).",
+        "Teoría cinética molecular (principales postulados), gas ideal.",
+        "Ecuación universal del gas ideal y variables de estado (presión, volumen, temperatura).",
+        "Aplicación de la ecuación universal del gas ideal (masa molar del gas, densidad del gas, volumen molar en condiciones normales y condiciones de Avogadro)."
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "ESTADO GASEOSO II",
+      "subtopics": [
+        "Ecuación general de los gases ideales, leyes empíricas de los gases (incluir gráficas).",
+        "Mezcla gaseosa (fracción molar, masa molar aparente de la mezcla gaseosa).",
+        "Ley de Dalton de las presiones parciales.",
+        "Ley de Amagat de los volúmenes parciales, ley de Graham de la difusión gaseosa."
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "REACCIONES QUÍMICAS I",
+      "subtopics": [
+        "Concepto de reacción química, ecuación química y evidencias empíricas de la ocurrencia de una reacción química.",
+        "Clasificación de las reacciones químicas según la forma de obtener los productos (adición, descomposición, desplazamiento simple y desplazamiento doble o metátesis).",
+        "Clasificación de las reacciones químicas según la energía involucrada o variación de entalpía (H) (reacciones exotérmicas y endotérmicas en cada caso con gráfica)."
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "REACCIONES QUÍMICAS II",
+      "subtopics": [
+        "Clasificación de las reacciones químicas según la variación del estado de oxidación (no Redox y Redox), componentes de una reacción Redox (agente oxidante, agente reductor, forma oxidada y forma reducida).",
+        "Balance de una ecuación química: método del tanteo, según el cambio del número de oxidación.",
+        "Balance de una ecuación química por el método del ion electrón (en medio ácido y en medio básico)."
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "ESTEQUIOMETRÍA I",
+      "subtopics": [
+        "Ley ponderal de la conservación de la masa (ley de Lavoisier).",
+        "Ley ponderal de las proporciones definidas (Ley de Proust) relación en moles y en masa, reactivo limitante y reactivo en exceso.",
+        "Ley volumétrica (Gay Lussac).",
+        "Rendimiento de una reacción y porcentaje de pureza."
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "ESTEQUIOMETRÍA II",
+      "subtopics": [
+        "Definición de masa o peso equivalente.",
+        "Cálculo de masa equivalente para un elemento.",
+        "Cálculo de masa equivalente para un compuesto (óxido metálico, hidróxido, ácido y sal). Cálculo de masa equivalente en una reacción redox.",
+        "Número de equivalente-gramo, ley del equivalente químico."
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "SOLUCIONES I",
+      "subtopics": [
+        "Definición de solución, componentes, propiedades generales. Clasificación por su estado físico.",
+        "Proceso de disolución en soluciones líquidas y su clasificación (solución molecular y solución electrolítica).",
+        "Solubilidad y factores que afectan la solubilidad.",
+        "Unidades físicas de concentración: porcentaje en masa, en volumen y masa/volumen."
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "SOLUCIONES II",
+      "subtopics": [
+        "Unidades químicas de concentración (fracción molar, molaridad, normalidad y molalidad).",
+        "Operaciones con soluciones: dilución, mezcla y neutralización.",
+        "Estequiometría con soluciones."
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Cálculos químicos: interpretación de una fórmula, fórmula molecular y fórmula empírica.",
+        "Estado gaseoso: ecuación universal del gas ideal (densidad y volumen molar), ley empírica, ley de Dalton y ley de Graham.",
+        "Reacciones químicas: clasificación (según la formación de productos, según la variación de la energía), balance REDOX e ion electrón.",
+        "Estequiometría: reactivo limitante y reactivo en exceso, porcentaje de rendimiento y pureza.",
+        "Soluciones: unidades de concentración (físicas y químicas), aplicación de soluciones en operaciones físicas y químicas."
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "CINÉTICA QUÍMICA",
+      "subtopics": [
+        "Velocidad de reacción.",
+        "Factores que influyen en la velocidad: naturaleza química de los reactivos, grado de división, temperatura, concentración, catalizador.",
+        "Ley de acción de masas velocidad. Mecanismo de la reacción (reacción elemental y no-elemental)."
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "EQUILIBRIO QUÍMICO I",
+      "subtopics": [
+        "Concepto y características generales.",
+        "Constante de equilibrio Kc y Kp, interpretación cualitativa.",
+        "Característica de la constante de equilibrio.",
+        "Relación entre Kp y Kc, operaciones con la constante de equilibrio."
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "EQUILIBRIO QUÍMICO II",
+      "subtopics": [
+        "Equilibrio homogéneo y heterogéneo.",
+        "Cálculo de la constante de equilibrio (Kp y Kc), grado de disociación, cociente de reacción.",
+        "Factores que alteran el equilibrio y principio de Le Chatelier."
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "ÁCIDOS Y BASES",
+      "subtopics": [
+        "Propiedades principales de los ácidos y bases.",
+        "Teoría de Svante Arrhenius.",
+        "Teoría de Brönsted y Lowry; teoría de Lewis (no detallar mucho).",
+        "Definición de electrolito fuerte, ácidos fuertes (cálculo de pH), bases fuertes (cálculo de pOH)."
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "EQUILIBRIO IÓNICO Y AUTOIONIZACIÓN DEL AGUA",
+      "subtopics": [
+        "Ácidos débiles (constante de acidez, fuerza de acidez, grado de ionización, cálculo de pH).",
+        "Bases débiles (constante de basicidad, fuerza básica, grado de ionización, cálculo de pOH).",
+        "Autoionización del agua según Arrhenius y Brönsted y Lowry.",
+        "Escala de pH en soluciones diluidas (solución ácida, básica y neutra)."
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "CELDA GALVÁNICA",
+      "subtopics": [
+        "Concepto. Elementos de una celda galvánica.",
+        "Pila de Daniell. Notación de la celda galvánica.",
+        "Potencial estándar de reducción y oxidación. Potencial estándar de una celda galvánica.",
+        "Espontaneidad de una reacción redox."
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "ELECTRÓLISIS",
+      "subtopics": [
+        "Elementos de la electrólisis, electrólisis de las sales haloideas fundidas.",
+        "Electrólisis de soluciones acuosas concentradas y diluidas.",
+        "Primera ley de Faraday.",
+        "Segunda ley de Faraday."
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Cinética química.",
+        "Equilibrio químico.",
+        "Teorías ácido y base (Arrhenius, Brönsted – Lowry), electrolitos fuertes (pH y pOH), electrolitos débiles (Ka, Kb, grado de ionización, pH y pOH).",
+        "Celdas galvánicas (potencial estándar de una celda, diagrama de celda en condiciones estándar, espontaneidad de una reacción REDOX).",
+        "Electrólisis de sales fundidas, electrólisis de soluciones acuosas concentradas y diluidas."
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "QUÍMICA ORGÁNICA E HIDROCARBUROS",
+      "subtopics": [
+        "Concepto de química orgánica, propiedades de los compuestos orgánicos, propiedades químicas del carbono (tetravalencia, covalencia y autosaturación; tipos de cadena carbonadas, tipos de carbono en una cadena saturada: primario, secundario, terciario y cuaternario).",
+        "Concepto de hidrocarburos, clasificación de hidrocarburos (alifáticos y aromáticos).",
+        "Alcanos (estructura, fórmula general, nomenclatura, tipos de fórmulas: desarrollada, semidesarrollada, condensada y global, isómeros de cadena), grupo alquilo, nomenclatura de alcanos ramificados."
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "HIDROCARBUROS II",
+      "subtopics": [
+        "Alquenos (estructura, fórmula general, nomenclatura: desarrollada, semidesarrollada, condensada y global, isómeros de posición y de cadena, isómeros geométricos), propiedades químicas (acidez, reacción de adición, reacción de polimerización), nomenclatura de alquenos ramificados.",
+        "Alquinos (estructura, fórmula general, nomenclatura y sus fórmulas químicas: desarrollada, semidesarrollada, condensada y global, isómeros de posición y de cadena, propiedades químicas: acidez, reacción de adición), nomenclatura de alquinos ramificados.",
+        "Hidrocarburos alicíclicos (cicloalcanos): estructura, fórmula general, nomenclatura y sus fórmulas químicas (desarrollada, semidesarrollada, condensada y global), nomenclatura de cicloalcanos ramificados (monosustituidos, disustituidos y polisustituidos).",
+        "Hidrocarburos aromáticos, benceno y sus derivados (monosustituidos y disustituidos)."
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "COMPUESTOS OXIGENADOS",
+      "subtopics": [
+        "Alcoholes, tipo de alcoholes (1°, 2° y 3°), polioles.",
+        "Éter (solo nomenclatura funcional).",
+        "Aldehídos y cetonas, obtención.",
+        "Ácidos carboxílicos, ésteres, obtención."
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "CONTAMINACIÓN AMBIENTAL",
+      "subtopics": [
+        "Ecosistema, componentes. Contaminante, tipos (químico, físico, biológico, biodegradables y no biodegradables).",
+        "Calentamiento global, destrucción de la capa de ozono, lluvia ácida.",
+        "Contaminación del agua, eutrofización, contaminación del suelo.",
+        "Técnicas para reducir la contaminación ambiental."
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "QUÍMICA APLICADA",
+      "subtopics": [
+        "Materiales modernos (polímeros, cristales líquidos, superconductores).",
+        "Carbohidratos (monosacáridos, disacáridos, polisacáridos).",
+        "Nanotecnología, nanomateriales (grafeno, fullereno, nanotubos).",
+        "Biotecnología."
+      ]
+    }
+  ]
+}

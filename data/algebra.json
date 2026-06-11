@@ -1,0 +1,390 @@
+{
+  "courseName": "Álgebra",
+  "weeks": [
+    {
+      "num": 1,
+      "topic": "LEYES DE EXPONENTES",
+      "subtopics": [
+        "Potenciación: definiciones.",
+        "Teoremas sobre potenciación.",
+        "Radicación: Definición.",
+        "Teoremas de radicación."
+      ]
+    },
+    {
+      "num": 2,
+      "topic": "PRODUCTOS NOTABLES",
+      "subtopics": [
+        "Trinomio cuadrado perfecto (completar cuadrados).",
+        "Diferencia de cuadrados.",
+        "Desarrollo de un binomio al cubo (CAUCHY).",
+        "Suma y diferencia de cubos."
+      ]
+    },
+    {
+      "num": 3,
+      "topic": "POLINOMIOS",
+      "subtopics": [
+        "Expresión y notación matemáticas. Definición de polinomios.",
+        "Valor numérico, Polinomio en una variable: lineal, cuadrática y cúbica.",
+        "Suma de coeficientes y término independiente.",
+        "Cambio de Variable."
+      ]
+    },
+    {
+      "num": 4,
+      "topic": "DIVISIÓN ALGEBRAICA y FACTORIZACIÓN I",
+      "subtopics": [
+        "Método de Horner.",
+        "Regla de Ruffini.",
+        "Teorema del resto (Divisor lineal).",
+        "Métodos para factorizar: factor común, agrupación e identidades."
+      ]
+    },
+    {
+      "num": 5,
+      "topic": "FACTORIZACIÓN II",
+      "subtopics": [
+        "Aspa simple.",
+        "Aspa doble especial.",
+        "Raíz, teorema del factor y PRR.",
+        "Divisores binómicos (solo cúbicas)."
+      ]
+    },
+    {
+      "num": 6,
+      "topic": "REFORZAMIENTO I",
+      "subtopics": [
+        "Leyes de exponentes y productos notables.",
+        "Polinomios.",
+        "División de polinomios (Identidad fundamental).",
+        "Criterios para factorizar."
+      ]
+    },
+    {
+      "num": 7,
+      "topic": "NÚMEROS COMPLEJOS I",
+      "subtopics": [
+        "Unidad imaginaria, propiedades.",
+        "Forma binómica, clasificación.",
+        "Operación en la forma binómica: +, -, x, /, al cuadrado."
+      ]
+    },
+    {
+      "num": 8,
+      "topic": "NÚMEROS COMPLEJOS II",
+      "subtopics": [
+        "Definición y propiedades del conjugado y opuesto.",
+        "Módulo de un complejo y sus propiedades.",
+        "Forma trigonométrica y exponencial."
+      ]
+    },
+    {
+      "num": 9,
+      "topic": "ECUACIONES POLINOMIALES I",
+      "subtopics": [
+        "Definiciones sobre ecuaciones y ecuación lineal.",
+        "Ecuaciones cuadráticas, resolución por factorización.",
+        "Fórmula general para resolver la ecuación cuadrática.",
+        "Teorema de Cardano para la ecuación cuadrática."
+      ]
+    },
+    {
+      "num": 10,
+      "topic": "ECUACIONES POLINOMIALES II",
+      "subtopics": [
+        "Análisis de la discriminante.",
+        "Raíz simple y de multiplicidad.",
+        "Ecuación de grado superior (resolución por factorización para cúbicas).",
+        "Teorema de Cardano para la ecuación cúbica."
+      ]
+    },
+    {
+      "num": 11,
+      "topic": "PARIDAD, ECUACIÓN BICUADRADA Y FRACCIONARIA",
+      "subtopics": [
+        "Teorema de paridad de raíces.",
+        "Resolución de ecuaciones bicuadradas.",
+        "Propiedades de las ecuaciones bicuadradas.",
+        "Problema de ecuación fraccionaria."
+      ]
+    },
+    {
+      "num": 12,
+      "topic": "DESIGUALDADES I E INTERVALOS",
+      "subtopics": [
+        "Desigualdad. La recta numérica e intervalos.",
+        "Operaciones con intervalos (de preferencia solo con dos intervalos).",
+        "Teoremas sobre desigualdades: Suma, multiplicación."
+      ]
+    },
+    {
+      "num": 13,
+      "topic": "DESIGUALDADES II",
+      "subtopics": [
+        "Suma de variaciones de dos variables independientes.",
+        "Teorema: número al cuadrado y elevar al cuadrado cuando x pertenece a un intervalo.",
+        "Teorema: inversa en una desigualdad.",
+        "Teorema de medias y Teorema de un número más su inverso."
+      ]
+    },
+    {
+      "num": 14,
+      "topic": "INECUACIONES POLINOMIALES I",
+      "subtopics": [
+        "Inecuación lineal.",
+        "Puntos críticos.",
+        "Inecuación Cuadrática (Δ > 0).",
+        "Inecuación Cuadrática (Δ = 0)."
+      ]
+    },
+    {
+      "num": 15,
+      "topic": "INECUACIONES POLINOMIALES II Y FRACCIONARIA",
+      "subtopics": [
+        "Inecuación Cuadrática y el teorema del trinomio positivo.",
+        "Inecuaciones polinomiales de grado superior.",
+        "Inecuación fraccionaria."
+      ]
+    },
+    {
+      "num": 16,
+      "topic": "REFORZAMIENTO II",
+      "subtopics": [
+        "Números complejos.",
+        "Ecuaciones polinomiales.",
+        "Intervalos y desigualdades.",
+        "Inecuación polinomial."
+      ]
+    },
+    {
+      "num": 17,
+      "topic": "EXPRESIONES IRRACIONALES",
+      "subtopics": [
+        "Conjunto de valores admisibles.",
+        "Ecuaciones irracionales.",
+        "Inecuaciones irracionales."
+      ]
+    },
+    {
+      "num": 18,
+      "topic": "VALOR ABSOLUTO",
+      "subtopics": [
+        "Valor absoluto: definición, ejemplos.",
+        "Ecuaciones con valor absoluto.",
+        "Inecuaciones con valor absoluto."
+      ]
+    },
+    {
+      "num": 19,
+      "topic": "FUNCIONES",
+      "subtopics": [
+        "Definición de función, teorema de unicidad.",
+        "Dominio, rango y regla de correspondencia de una función.",
+        "Cálculo del dominio y rango."
+      ]
+    },
+    {
+      "num": 20,
+      "topic": "GRÁFICAS DE FUNCIONES I",
+      "subtopics": [
+        "Gráfica de una función real (propiedades).",
+        "Funciones constante y lineal.",
+        "Función cuadrática (vértice)."
+      ]
+    },
+    {
+      "num": 21,
+      "topic": "GRÁFICAS DE FUNCIONES II",
+      "subtopics": [
+        "Función cuadrática (raíces y Discriminante).",
+        "Función valor absoluto.",
+        "Funciones: raíz cuadrada."
+      ]
+    },
+    {
+      "num": 22,
+      "topic": "GRÁFICAS DE FUNCIONES III",
+      "subtopics": [
+        "Función inverso multiplicativo.",
+        "Función potencial.",
+        "Funciones polinomiales."
+      ]
+    },
+    {
+      "num": 23,
+      "topic": "ÁLGEBRA DE FUNCIONES",
+      "subtopics": [
+        "Igualdad de funciones.",
+        "Suma, resta, multiplicación y división de funciones.",
+        "Composición de funciones."
+      ]
+    },
+    {
+      "num": 24,
+      "topic": "FUNCIÓN INVERSA",
+      "subtopics": [
+        "Función inyectiva, sobreyectiva y biyectiva.",
+        "Función inversa y gráfica de la función inversa."
+      ]
+    },
+    {
+      "num": 25,
+      "topic": "LOGARITMOS Y FUNCIÓN LOGARÍTMICA",
+      "subtopics": [
+        "Definición y teoremas básicos de logaritmos. (Sin intercambio).",
+        "Función logarítmica (dominio y rango).",
+        "Gráfica de funciones logarítmicas."
+      ]
+    },
+    {
+      "num": 26,
+      "topic": "FUNCIÓN EXPONENCIAL",
+      "subtopics": [
+        "Ecuación e inecuación logarítmica.",
+        "Función exponencial (rango).",
+        "Gráfica de funciones exponenciales.",
+        "Ecuación e inecuación exponencial."
+      ]
+    },
+    {
+      "num": 27,
+      "topic": "REFORZAMIENTO III",
+      "subtopics": [
+        "Expresiones irracionales y valor absoluto.",
+        "Funciones y gráfica de funciones.",
+        "Función inversa y logaritmos en R.",
+        "Función exponencial y logarítmica."
+      ]
+    },
+    {
+      "num": 28,
+      "topic": "LÍMITES",
+      "subtopics": [
+        "Noción de límite, unicidad del límite.",
+        "Cálculo de límites finitos (formas determinadas).",
+        "Cálculo de límites finitos (formas indeterminadas).",
+        "Cálculo de límites infinitos (formas indeterminadas, orientado a sucesiones y series)."
+      ]
+    },
+    {
+      "num": 29,
+      "topic": "SUCESIONES",
+      "subtopics": [
+        "Sucesiones reales: definición y notación. Término enésimo, regla de recurrencia.",
+        "Sucesión monótona, sucesión acotada.",
+        "Convergencia y divergencia de sucesiones (ningún criterio).",
+        "Sucesión oscilante y alternante."
+      ]
+    },
+    {
+      "num": 30,
+      "topic": "SERIES I",
+      "subtopics": [
+        "Sumas notables.",
+        "Suma geométrica y telescópica.",
+        "Series, definición, suma parcial.",
+        "Series convergentes y divergentes."
+      ]
+    },
+    {
+      "num": 31,
+      "topic": "SERIES II",
+      "subtopics": [
+        "Series geométricas.",
+        "Series telescópicas.",
+        "Serie armónica y la serie 'p'.",
+        "Series recurrentes.",
+        "Criterio de divergencia."
+      ]
+    },
+    {
+      "num": 32,
+      "topic": "MATRICES I",
+      "subtopics": [
+        "Definición, notación y orden de una matriz.",
+        "Igualdad de matrices.",
+        "Clasificación de las matrices.",
+        "Operaciones con matrices: adición, multiplicación y potenciación.",
+        "Matrices especiales (involutiva, idempotente y nilpotente)."
+      ]
+    },
+    {
+      "num": 33,
+      "topic": "MATRICES II Y DETERMINANTES I",
+      "subtopics": [
+        "Transpuesta, simétrica, antisimétrica, traza de una matriz y propiedades.",
+        "Definición y técnicas de cálculo del determinante (orden 2, 3 y 4).",
+        "Propiedades de los determinantes.",
+        "Determinante de Vandermonde."
+      ]
+    },
+    {
+      "num": 34,
+      "topic": "DETERMINANTES II Y MATRIZ INVERSA",
+      "subtopics": [
+        "Regla de Laplace (Forma práctica).",
+        "Definición y cálculo (orden 2).",
+        "Cálculo de la inversa mediante la matriz adjunta de orden 3.",
+        "Propiedades de la adjunta.",
+        "Propiedades de la inversa."
+      ]
+    },
+    {
+      "num": 35,
+      "topic": "REFORZAMIENTO IV",
+      "subtopics": [
+        "Límites, sucesiones y series.",
+        "Matrices y determinantes.",
+        "Matriz inversa y adjunta."
+      ]
+    },
+    {
+      "num": 36,
+      "topic": "SISTEMA DE ECUACIONES LINEALES I",
+      "subtopics": [
+        "Métodos de resolución: eliminación y sustitución.",
+        "Método por la regla de Cramer.",
+        "Método matricial."
+      ]
+    },
+    {
+      "num": 37,
+      "topic": "SISTEMA DE ECUACIONES LINEALES II Y NO LINEALES",
+      "subtopics": [
+        "Teoremas de los sistemas lineales de orden 2x2.",
+        "Teoremas de los sistemas lineales de orden 3x3 en base a la regla de Cramer.",
+        "Resolución de sistemas de ecuaciones no lineales."
+      ]
+    },
+    {
+      "num": 38,
+      "topic": "GRÁFICA DE RELACIONES",
+      "subtopics": [
+        "Gráfica de relaciones definidas por ecuaciones: lineal, valor absoluto, raíz cuadrada y cuadráticas en x e y.",
+        "Gráfica de relaciones definidas por inecuaciones: lineal, valor absoluto, raíz cuadrada y cuadráticas en x e y."
+      ]
+    },
+    {
+      "num": 39,
+      "topic": "PROGRAMACIÓN LINEAL I",
+      "subtopics": [
+        "Gráfica de relaciones en C (complejos).",
+        "Definición y notación de un problema de programación lineal.",
+        "Determinación de la región factible y región convexa.",
+        "Valores máximos y mínimos de la función objetivo (teorema fundamental de PL mediante el método algebraico)."
+      ]
+    },
+    {
+      "num": 40,
+      "topic": "PROGRAMACIÓN LINEAL II",
+      "subtopics": [
+        "Rectas de nivel.",
+        "Vector que indica el crecimiento de las rectas de nivel.",
+        "Resolución de un PL mediante las rectas de nivel.",
+        "Problemas contextualizados básico con datos en cuadro.",
+        "Problemas contextualizados sin datos en cuadro."
+      ]
+    }
+  ]
+}

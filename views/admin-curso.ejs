@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar <%= courseName %> - Admin</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/admin" class="font-bold text-lg tracking-wide flex items-center gap-2">
+        <span>← Volver</span>
+      </a>
+      <span class="font-semibold text-sm bg-indigo-700 px-3 py-1 rounded-full"><%= courseName %></span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-xl w-full mx-auto px-4 py-6">
+    <div class="mb-6 flex justify-between items-center">
+      <div>
+        <h1 class="text-2xl font-bold text-slate-800">Gestionar Resoluciones</h1>
+        <p class="text-sm text-slate-500 mt-1">Sube y elimina resoluciones por semana.</p>
+      </div>
+    </div>
+
+    <!-- Alertas de Éxito -->
+    <div id="alert" class="hidden mb-4 p-4 rounded-xl text-sm border flex items-center gap-2">
+      <span id="alert-text"></span>
+    </div>
+
+    <!-- Lista de Semanas como Acordeón con details/summary -->
+    <div class="space-y-4">
+      <% weeks.forEach(week => { %>
+        <details class="group bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden transition" id="week-<%= week.num %>">
+          <summary class="list-none flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 transition font-semibold select-none">
+            <div class="flex-grow pr-4">
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Semana <%= week.num %></span>
+              <h3 class="text-base font-bold text-slate-800 leading-tight mt-0.5"><%= week.topic %></h3>
+              <p class="text-xs font-normal text-slate-400 mt-1 truncate max-w-[280px] sm:max-w-xs">
+                <%= week.subtopics.join(', ') %>
+              </p>
+            </div>
+            <div class="shrink-0 flex items-center gap-2 text-slate-400 group-open:rotate-180 transition-transform duration-200">
+              <!-- Indicador de cantidad de fotos cargadas -->
+              <% if (week.photos.length > 0) { %>
+                <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-2 py-1 rounded-full"><%= week.photos.length %> 🖼️</span>
+              <% } %>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+
+          <div class="border-t border-slate-50 p-4 bg-slate-50/50 space-y-4">
+            
+            <!-- Lista de subtemas completa -->
+            <div class="bg-white p-3 rounded-xl border border-slate-100 text-xs text-slate-600">
+              <p class="font-bold text-slate-700 mb-1">Subtemas:</p>
+              <ul class="list-disc pl-4 space-y-0.5">
+                <% week.subtopics.forEach(sub => { %>
+                  <li><%= sub %></li>
+                <% }) %>
+              </ul>
+            </div>
+
+            <!-- Formulario de Subida -->
+            <div class="bg-white p-4 rounded-xl border border-slate-100 space-y-2">
+              <p class="text-sm font-bold text-slate-700">Subir nueva(s) resolución(es)</p>
+              <p class="text-xs text-slate-400">Puedes seleccionar varias fotos a la vez.</p>
+              
+              <form action="/admin/upload" method="POST" enctype="multipart/form-data" class="space-y-3">
+                <input type="hidden" name="course" value="<%= courseId %>">
+                <input type="hidden" name="week" value="<%= week.num %>">
+                
+                <div class="flex items-center justify-center w-full">
+                  <label class="flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-slate-200 hover:border-indigo-400 rounded-xl cursor-pointer hover:bg-slate-50/50 transition">
+                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                      <svg class="w-6 h-6 mb-1 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                      </svg>
+                      <p class="text-xs text-slate-500 font-semibold">Seleccionar fotos</p>
+                    </div>
+                    <input type="file" name="photos" class="hidden" accept="image/*" multiple required onchange="this.form.submit()">
+                  </label>
+                </div>
+              </form>
+            </div>
+
+            <!-- Fotos cargadas actualmente -->
+            <div>
+              <p class="text-sm font-bold text-slate-700 mb-2">Fotos subidas (<%= week.photos.length %>)</p>
+              <% if (week.photos.length === 0) { %>
+                <p class="text-xs text-slate-400 italic">No hay fotos subidas para esta semana aún.</p>
+              <% } else { %>
+                <div class="grid grid-cols-2 gap-2">
+                  <% week.photos.forEach((photo, idx) => { %>
+                    <div class="relative bg-white border border-slate-100 rounded-xl p-1 shadow-sm group/photo">
+                      <img src="<%= photo %>" class="w-full h-32 object-cover rounded-lg" alt="Foto">
+                      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/photo:opacity-100 transition rounded-lg flex items-center justify-center gap-2">
+                        <!-- Botón Eliminar -->
+                        <form action="/admin/delete-photo" method="POST" onsubmit="return confirm('¿Seguro de eliminar esta foto?')">
+                          <input type="hidden" name="photoPath" value="<%= photo %>">
+                          <input type="hidden" name="courseId" value="<%= courseId %>">
+                          <button type="submit" class="bg-rose-600 hover:bg-rose-700 text-white p-2 rounded-full shadow transition transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  <% }) %>
+                </div>
+              <% } %>
+            </div>
+
+          </div>
+        </details>
+      <% }) %>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-400">
+    <p>© <%= new Date().getFullYear() %> Resoluciones Preu.</p>
+  </footer>
+
+  <script>
+    // Mostrar alertas basadas en parámetros de URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const alertDiv = document.getElementById('alert');
+    const alertText = document.getElementById('alert-text');
+    
+    if (success) {
+      alertDiv.classList.remove('hidden');
+      if (success === 'upload') {
+        alertDiv.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-700');
+        alertText.innerHTML = '✨ ¡Resoluciones subidas con éxito!';
+      } else if (success === 'delete') {
+        alertDiv.classList.add('bg-amber-50', 'border-amber-500', 'text-amber-700');
+        alertText.innerHTML = '🗑️ Resolución eliminada correctamente.';
+      }
+      
+      // Auto-ocultar después de 3 segundos
+      setTimeout(() => {
+        alertDiv.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+        setTimeout(() => alertDiv.classList.add('hidden'), 500);
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>

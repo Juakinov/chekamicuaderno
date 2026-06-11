@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resoluciones Preu - Material de Academia</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <a href="/" class="font-bold text-lg tracking-wide flex items-center gap-1.5">
+        <span>🎓 Resoluciones Preu</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <% if (loggedIn) { %>
+          <a href="/admin" class="text-xs bg-indigo-700 hover:bg-indigo-800 border border-indigo-500 font-semibold px-3 py-1.5 rounded-lg transition">
+            Admin
+          </a>
+        <% } else { %>
+          <a href="/login" class="text-xs bg-indigo-700/50 hover:bg-indigo-700 font-semibold px-3 py-1.5 rounded-lg transition">
+            Ingresar
+          </a>
+        <% } %>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-700 text-white py-10 px-4 text-center">
+    <div class="max-w-xl mx-auto space-y-3">
+      <h1 class="text-3xl font-extrabold tracking-tight">¡Logra tu Ingreso! 🚀</h1>
+      <p class="text-sm text-indigo-100 max-w-sm mx-auto leading-relaxed">
+        Encuentra las resoluciones de la práctica dirigida y la tarea domiciliaria de cada semana. ¡No te quedes con la duda!
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-xl w-full mx-auto px-4 py-6">
+    <div class="mb-4">
+      <h2 class="text-lg font-bold text-slate-800">Cursos de la Academia</h2>
+      <p class="text-xs text-slate-400">Selecciona una materia para ver las soluciones.</p>
+    </div>
+
+    <!-- Lista de Cursos -->
+    <div class="grid grid-cols-1 gap-4">
+      
+      <% courses.forEach(function(course) { %>
+        <a href="/curso/<%= course.id %>" class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition duration-200 block group">
+          <div class="flex justify-between items-center">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Activo</span>
+                <span class="text-xs text-slate-400 font-medium">40 Semanas</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-800 group-hover:text-indigo-600 transition"><%= course.name %></h3>
+              <p class="text-xs text-slate-500 leading-relaxed"><%= course.description %></p>
+            </div>
+            <span class="bg-indigo-50 text-indigo-600 p-2.5 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition duration-200 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      <% }); %>
+
+    </div>
+
+    <!-- Community Growth Box -->
+    <div class="mt-8 bg-indigo-50 border border-indigo-100 rounded-2xl p-4 flex gap-3 text-indigo-900 text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+      <div>
+        <p class="font-bold">✨ Hagamos comunidad</p>
+        <p class="mt-1 leading-relaxed text-indigo-700 text-xs">
+          Comparte este sitio con tus compañeros de aula. Cuantos más seamos, más rápido podremos subir el material resuelto de todas las materias. ¡Muchos éxitos en tu preparación!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-400">
+    <p>© <%= new Date().getFullYear() %> Resoluciones Preu. Desarrollado paso a paso.</p>
+  </footer>
+
+</body>
+</html>
