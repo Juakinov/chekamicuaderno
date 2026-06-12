@@ -4,6 +4,7 @@
   "description": "Plataforma de resoluciones preuniversitarias",
   "main": "server.js",
   "scripts": {
+    "build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/output.css --minify",
     "start": "node server.js"
   },
   "dependencies": {
@@ -12,5 +13,9 @@
     "express": "^4.21.1",
     "express-session": "^1.18.1",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
   }
 }
