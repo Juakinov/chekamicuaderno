@@ -3,17 +3,22 @@ const session = require('express-session');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const CONFIG_DIR = path.join(__dirname, 'config');
+const PASSWORD_FILE = path.join(CONFIG_DIR, 'password.json');
+
+if (!fs.existsSync(CONFIG_DIR)) {
+  fs.mkdirSync(CONFIG_DIR, { recursive: true });
+}
+
 // Soporte para Railway Volume (persistencia de fotos entre deploys)
-// Cuando el Volume está montado, Railway inyecta RAILWAY_VOLUME_MOUNT_PATH
-const UPLOADS_BASE = process.env.RAILWAY_VOLUME_MOUNT_PATH
-  ? path.join(process.env.RAILWAY_VOLUME_MOUNT_PATH, 'uploads')
+const VOLUME_MOUNT = process.env.RAILWAY_VOLUME_MOUNT_PATH;
+const UPLOADS_BASE = VOLUME_MOUNT
+  ? path.join(VOLUME_MOUNT, 'uploads')
   : path.join(__dirname, 'public', 'uploads');
 
 // Servir archivos estáticos
@@ -43,9 +48,19 @@ app.use(session({
 
 // Leer contraseña de configuración
 function getAdminPassword() {
-  const pw = process.env.ADMIN_PASSWORD;
-  if (!pw) console.log('ADMIN_PASSWORD no configurada, usando fallback');
-  return pw || 'admin';
+  const envPw = process.env.ADMIN_PASSWORD;
+  if (envPw) return envPw;
+  if (fs.existsSync(PASSWORD_FILE)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(PASSWORD_FILE, 'utf8'));
+      if (data.password) return data.password;
+    } catch (e) { /* ignorar */ }
+  }
+  return 'admin';
+}
+
+function isPasswordConfigured() {
+  return !!(process.env.ADMIN_PASSWORD || (fs.existsSync(PASSWORD_FILE) && JSON.parse(fs.readFileSync(PASSWORD_FILE, 'utf8')).password));
 }
 
 // Middleware para proteger rutas de admin
@@ -55,6 +70,14 @@ function requireLogin(req, res, next) {
   } else {
     res.redirect('/login');
   }
+}
+
+// Middleware que redirige a setup si no hay contraseña configurada
+function requireSetup(req, res, next) {
+  if (!isPasswordConfigured()) {
+    return res.redirect('/setup-password');
+  }
+  next();
 }
 
 // Configuración de Multer para subida dinámica
@@ -117,6 +140,7 @@ app.get('/debug-env', (req, res) => {
   const pwKeys = allKeys.filter(k => /pass|admin|key|secret/i.test(k));
   res.json({
     ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
+    HAS_PASSWORD_FILE: fs.existsSync(PASSWORD_FILE),
     ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
     TOTAL_ENV_KEYS: allKeys.length,
     ENV_KEYS_FILTERED: pwKeys,
@@ -129,6 +153,32 @@ app.get('/debug-env', (req, res) => {
 });
 
 // === RUTAS PÚBLICAS ===
+
+// Setup - Configurar contraseña por primera vez
+app.get('/setup-password', (req, res) => {
+  if (isPasswordConfigured()) {
+    if (req.session.loggedIn) return res.redirect('/admin');
+    return res.redirect('/login');
+  }
+  res.render('setup-password', { error: null });
+});
+
+app.post('/setup-password', (req, res) => {
+  if (isPasswordConfigured()) {
+    if (req.session.loggedIn) return res.redirect('/admin');
+    return res.redirect('/login');
+  }
+  const { password, confirm } = req.body;
+  if (!password || password.length < 4) {
+    return res.render('setup-password', { error: 'La contraseña debe tener al menos 4 caracteres' });
+  }
+  if (password !== confirm) {
+    return res.render('setup-password', { error: 'Las contraseñas no coinciden' });
+  }
+  fs.writeFileSync(PASSWORD_FILE, JSON.stringify({ password }), 'utf8');
+  req.session.loggedIn = true;
+  res.redirect('/admin');
+});
 
 // Inicio
 app.get('/', (req, res) => {
@@ -179,7 +229,7 @@ app.get('/curso/:id', (req, res) => {
 // === RUTAS DE AUTENTICACIÓN Y ADMIN ===
 
 // Login Form
-app.get('/login', (req, res) => {
+app.get('/login', requireSetup, (req, res) => {
   if (req.session.loggedIn) {
     return res.redirect('/admin');
   }
