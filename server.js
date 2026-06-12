@@ -8,16 +8,26 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Asegurar que el directorio de uploads existe (Railway Volume mount)
-const uploadsDir = path.join(__dirname, 'public', 'uploads');
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
+// Soporte para Railway Volume (persistencia de fotos entre deploys)
+// Cuando el Volume está montado, Railway inyecta RAILWAY_VOLUME_MOUNT_PATH
+const UPLOADS_BASE = process.env.RAILWAY_VOLUME_MOUNT_PATH
+  ? path.join(process.env.RAILWAY_VOLUME_MOUNT_PATH, 'uploads')
+  : path.join(__dirname, 'public', 'uploads');
+
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+if (process.env.RAILWAY_VOLUME_MOUNT_PATH) {
+  app.use('/uploads', express.static(UPLOADS_BASE));
 }
 
-// Configuración de EJS y archivos estáticos
+// Asegurar que el directorio de uploads existe
+if (!fs.existsSync(UPLOADS_BASE)) {
+  fs.mkdirSync(UPLOADS_BASE, { recursive: true });
+}
+
+// Configuración de EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -51,7 +61,7 @@ const storage = multer.diskStorage({
     if (isNaN(weekNum)) weekNum = 1;
     const weekFolder = 'semana' + String(weekNum).padStart(2, '0');
     
-    const dir = path.join(__dirname, 'public', 'uploads', course, weekFolder);
+    const dir = path.join(UPLOADS_BASE, course, weekFolder);
     
     // Crear directorio si no existe
     fs.mkdirSync(dir, { recursive: true });
@@ -82,7 +92,7 @@ const upload = multer({
 // Helper para obtener fotos de una semana
 function getPhotosForWeek(course, weekNum) {
   const weekFolder = 'semana' + String(weekNum).padStart(2, '0');
-  const dir = path.join(__dirname, 'public', 'uploads', course, weekFolder);
+  const dir = path.join(UPLOADS_BASE, course, weekFolder);
   if (fs.existsSync(dir)) {
     try {
       const files = fs.readdirSync(dir);
@@ -239,10 +249,13 @@ app.post('/admin/delete-photo', requireLogin, (req, res) => {
     return res.status(400).send('Ruta de foto no proporcionada');
   }
 
-  // Asegurarse de que el path de la foto está dentro del directorio public para seguridad
-  const safePath = path.join(__dirname, 'public', photoPath);
+  // Asegurarse de que el path de la foto está dentro del directorio permitido
+  const safePath = process.env.RAILWAY_VOLUME_MOUNT_PATH
+    ? path.join(UPLOADS_BASE, photoPath.replace(/^\/uploads\//, ''))
+    : path.join(__dirname, 'public', photoPath);
+  const allowedBase = process.env.RAILWAY_VOLUME_MOUNT_PATH ? UPLOADS_BASE : path.join(__dirname, 'public', 'uploads');
   
-  if (safePath.startsWith(path.join(__dirname, 'public', 'uploads'))) {
+  if (safePath.startsWith(allowedBase)) {
     if (fs.existsSync(safePath)) {
       try {
         fs.unlinkSync(safePath);
