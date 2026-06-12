@@ -31,7 +31,9 @@ app.use(session({
 
 // Leer contraseña de configuración
 function getAdminPassword() {
-  return process.env.ADMIN_PASSWORD || 'admin';
+  const pw = process.env.ADMIN_PASSWORD;
+  if (!pw) console.log('ADMIN_PASSWORD no configurada, usando fallback');
+  return pw || 'admin';
 }
 
 // Middleware para proteger rutas de admin
