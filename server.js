@@ -35,7 +35,7 @@ if (!fs.existsSync(UPLOADS_BASE)) {
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 if (VOLUME_MOUNT) {
-  app.use('/uploads', express.static(UPLOADS_BASE));
+  app.use('/uploads', express.static(UPLOADS_BASE, { maxAge: '1d' }));
 }
 
 // Configuración de EJS

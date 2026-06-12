@@ -118,6 +118,7 @@
                       <img src="<%= photo %>" 
                         class="w-full object-contain cursor-pointer max-h-[500px]" 
                         alt="Solución Semana <%= week.num %> - Hoja <%= idx + 1 %>"
+                        loading="lazy" decoding="async"
                         onclick="openLightbox('<%= photo %>')">
                       <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-xs">
                         Pág. <%= idx + 1 %>
