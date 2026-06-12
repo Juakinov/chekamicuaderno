@@ -125,7 +125,6 @@ app.get('/debug-env', (req, res) => {
     RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
   });
 });
-});
 
 // === RUTAS PÚBLICAS ===
 
