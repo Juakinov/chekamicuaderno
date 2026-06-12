@@ -10,6 +10,7 @@ const app = express();
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || '';
 app.locals.gaMeasurementId = GA_MEASUREMENT_ID;
+app.locals.gaCookieDomain = GA_MEASUREMENT_ID ? (process.env.GA_COOKIE_DOMAIN || 'chekamicuaderno.up.railway.app') : '';
 const PORT = process.env.PORT || 3000;
 
 // Detectar Volume de Railway montado en /data (no depende de env vars)
@@ -145,6 +146,7 @@ app.get('/debug-env', (req, res) => {
   const allKeys = Object.keys(process.env).sort();
   const pwKeys = allKeys.filter(k => /pass|admin|key|secret/i.test(k));
   res.json({
+    GA_MEASUREMENT_ID_SET: !!process.env.GA_MEASUREMENT_ID,
     ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
     HAS_PASSWORD_FILE: fs.existsSync(PASSWORD_FILE),
     ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
