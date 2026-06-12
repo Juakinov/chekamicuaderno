@@ -111,8 +111,13 @@ function getPhotosForWeek(course, weekNum) {
 
 // === DIAGNÓSTICO ===
 app.get('/debug-env', (req, res) => {
+  const allKeys = Object.keys(process.env).sort();
+  const pwKeys = allKeys.filter(k => /pass/i.test(k));
   res.json({
     ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
+    ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
+    ENV_KEYS_WITH_PASS: pwKeys,
+
     NODE_ENV: process.env.NODE_ENV || 'no definido',
     RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
   });
