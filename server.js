@@ -85,7 +85,7 @@ function getPhotosForWeek(course, weekNum) {
   const dir = path.join(__dirname, 'public', 'uploads', course, weekFolder);
   if (fs.existsSync(dir)) {
     try {
-      const files = fs.readdirSync(dir);
+      const files = fs.readdirSync(dir).sort();
       // Filtrar por extensiones comunes de imágenes
       return files.filter(file => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
                   .map(file => `/uploads/${course}/${weekFolder}/${file}`);
