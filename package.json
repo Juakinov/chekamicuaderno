@@ -4,7 +4,6 @@
   "description": "Plataforma de resoluciones preuniversitarias",
   "main": "server.js",
   "scripts": {
-    "build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/output.css --minify",
     "start": "node server.js"
   },
   "dependencies": {
