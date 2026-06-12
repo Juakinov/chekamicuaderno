@@ -120,6 +120,8 @@ app.get('/debug-env', (req, res) => {
     ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
     TOTAL_ENV_KEYS: allKeys.length,
     ENV_KEYS_FILTERED: pwKeys,
+    RAILWAY_KEYS: allKeys.filter(k => /RAILWAY|RAIL/i.test(k)),
+    ADMIN_KEYS: allKeys.filter(k => /ADMIN/i.test(k)),
     FIRST_20_KEYS: allKeys.slice(0, 20),
     NODE_ENV: process.env.NODE_ENV || 'no definido',
     RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
