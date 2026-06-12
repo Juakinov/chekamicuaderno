@@ -6,6 +6,10 @@ const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
+
+// Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || '';
+app.locals.gaMeasurementId = GA_MEASUREMENT_ID;
 const PORT = process.env.PORT || 3000;
 
 // Detectar Volume de Railway montado en /data (no depende de env vars)
