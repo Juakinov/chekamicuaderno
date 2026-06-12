@@ -99,6 +99,15 @@ function getPhotosForWeek(course, weekNum) {
   return [];
 }
 
+// === DIAGNÓSTICO ===
+app.get('/debug-env', (req, res) => {
+  res.json({
+    ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
+    NODE_ENV: process.env.NODE_ENV || 'no definido',
+    RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
+  });
+});
+
 // === RUTAS PÚBLICAS ===
 
 // Inicio
