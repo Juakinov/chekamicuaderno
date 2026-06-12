@@ -8,31 +8,30 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const CONFIG_DIR = path.join(__dirname, 'config');
-const PASSWORD_FILE = path.join(CONFIG_DIR, 'password.json');
-
-if (!fs.existsSync(CONFIG_DIR)) {
-  fs.mkdirSync(CONFIG_DIR, { recursive: true });
-}
-
-// Soporte para Railway Volume (persistencia de fotos entre deploys)
-const VOLUME_MOUNT = process.env.RAILWAY_VOLUME_MOUNT_PATH
-  || process.env.RAILWAY_VOLUME_PATH
-  || process.env.VOLUME_MOUNT_PATH
-  || '';
+// Detectar Volume de Railway montado en /data (no depende de env vars)
+const VOLUME_MOUNT = fs.existsSync('/data') ? '/data' : '';
 const UPLOADS_BASE = VOLUME_MOUNT
   ? path.join(VOLUME_MOUNT, 'uploads')
   : path.join(__dirname, 'public', 'uploads');
+
+// Config dentro del Volume (persiste entre redeploys)
+const CONFIG_DIR = VOLUME_MOUNT
+  ? path.join(VOLUME_MOUNT, 'config')
+  : path.join(__dirname, 'config');
+const PASSWORD_FILE = path.join(CONFIG_DIR, 'password.json');
+
+// Asegurar directorios
+if (!fs.existsSync(CONFIG_DIR)) {
+  fs.mkdirSync(CONFIG_DIR, { recursive: true });
+}
+if (!fs.existsSync(UPLOADS_BASE)) {
+  fs.mkdirSync(UPLOADS_BASE, { recursive: true });
+}
 
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 if (VOLUME_MOUNT) {
   app.use('/uploads', express.static(UPLOADS_BASE));
-}
-
-// Asegurar que el directorio de uploads existe
-if (!fs.existsSync(UPLOADS_BASE)) {
-  fs.mkdirSync(UPLOADS_BASE, { recursive: true });
 }
 
 // Configuración de EJS
@@ -145,14 +144,16 @@ app.get('/debug-env', (req, res) => {
     ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
     HAS_PASSWORD_FILE: fs.existsSync(PASSWORD_FILE),
     ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
+    VOLUME_MOUNT: VOLUME_MOUNT,
+    VOLUME_EXISTS: fs.existsSync('/data'),
+    VOLUME_WRITABLE: (() => { try { fs.writeFileSync('/data/.test', ''); fs.unlinkSync('/data/.test'); return true; } catch(e) { return false; } })(),
+    UPLOADS_BASE: UPLOADS_BASE,
     TOTAL_ENV_KEYS: allKeys.length,
     ENV_KEYS_FILTERED: pwKeys,
     RAILWAY_KEYS: allKeys.filter(k => /RAILWAY|RAIL/i.test(k)),
     VOLUME_KEYS: allKeys.filter(k => /VOLUME|MOUNT|VOL/i.test(k)),
     ADMIN_KEYS: allKeys.filter(k => /ADMIN/i.test(k)),
-    ALL_KEYS: allKeys,
-    NODE_ENV: process.env.NODE_ENV || 'no definido',
-    RAILWAY_VOLUME_MOUNT_PATH: VOLUME_MOUNT || 'no definido'
+    NODE_ENV: process.env.NODE_ENV || 'no definido'
   });
 });
 
