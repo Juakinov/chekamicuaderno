@@ -3,7 +3,9 @@ const session = require('express-session');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -112,15 +114,17 @@ function getPhotosForWeek(course, weekNum) {
 // === DIAGNÓSTICO ===
 app.get('/debug-env', (req, res) => {
   const allKeys = Object.keys(process.env).sort();
-  const pwKeys = allKeys.filter(k => /pass/i.test(k));
+  const pwKeys = allKeys.filter(k => /pass|admin|key|secret/i.test(k));
   res.json({
     ADMIN_PASSWORD_SET: !!process.env.ADMIN_PASSWORD,
     ADMIN_LENGTH: process.env.ADMIN_PASSWORD ? process.env.ADMIN_PASSWORD.length : 0,
-    ENV_KEYS_WITH_PASS: pwKeys,
-
+    TOTAL_ENV_KEYS: allKeys.length,
+    ENV_KEYS_FILTERED: pwKeys,
+    FIRST_20_KEYS: allKeys.slice(0, 20),
     NODE_ENV: process.env.NODE_ENV || 'no definido',
     RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
   });
+});
 });
 
 // === RUTAS PÚBLICAS ===
