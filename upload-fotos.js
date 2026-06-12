@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DESKTOP_FOLDER = path.join(require('os').homedir(), 'Desktop', 'Fotos-Cheka mi cuaderno');
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://chekamicuaderno.up.railway.app';
 
 let cookie = '';
 

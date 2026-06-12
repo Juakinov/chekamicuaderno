@@ -16,14 +16,17 @@ if (!fs.existsSync(CONFIG_DIR)) {
 }
 
 // Soporte para Railway Volume (persistencia de fotos entre deploys)
-const VOLUME_MOUNT = process.env.RAILWAY_VOLUME_MOUNT_PATH;
+const VOLUME_MOUNT = process.env.RAILWAY_VOLUME_MOUNT_PATH
+  || process.env.RAILWAY_VOLUME_PATH
+  || process.env.VOLUME_MOUNT_PATH
+  || '';
 const UPLOADS_BASE = VOLUME_MOUNT
   ? path.join(VOLUME_MOUNT, 'uploads')
   : path.join(__dirname, 'public', 'uploads');
 
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
-if (process.env.RAILWAY_VOLUME_MOUNT_PATH) {
+if (VOLUME_MOUNT) {
   app.use('/uploads', express.static(UPLOADS_BASE));
 }
 
@@ -145,10 +148,11 @@ app.get('/debug-env', (req, res) => {
     TOTAL_ENV_KEYS: allKeys.length,
     ENV_KEYS_FILTERED: pwKeys,
     RAILWAY_KEYS: allKeys.filter(k => /RAILWAY|RAIL/i.test(k)),
+    VOLUME_KEYS: allKeys.filter(k => /VOLUME|MOUNT|VOL/i.test(k)),
     ADMIN_KEYS: allKeys.filter(k => /ADMIN/i.test(k)),
-    FIRST_20_KEYS: allKeys.slice(0, 20),
+    ALL_KEYS: allKeys,
     NODE_ENV: process.env.NODE_ENV || 'no definido',
-    RAILWAY_VOLUME_MOUNT_PATH: process.env.RAILWAY_VOLUME_MOUNT_PATH || 'no definido'
+    RAILWAY_VOLUME_MOUNT_PATH: VOLUME_MOUNT || 'no definido'
   });
 });
 
@@ -321,10 +325,10 @@ app.post('/admin/delete-photo', requireLogin, (req, res) => {
   }
 
   // Asegurarse de que el path de la foto está dentro del directorio permitido
-  const safePath = process.env.RAILWAY_VOLUME_MOUNT_PATH
+  const safePath = VOLUME_MOUNT
     ? path.join(UPLOADS_BASE, photoPath.replace(/^\/uploads\//, ''))
     : path.join(__dirname, 'public', photoPath);
-  const allowedBase = process.env.RAILWAY_VOLUME_MOUNT_PATH ? UPLOADS_BASE : path.join(__dirname, 'public', 'uploads');
+  const allowedBase = VOLUME_MOUNT ? UPLOADS_BASE : path.join(__dirname, 'public', 'uploads');
   
   if (safePath.startsWith(allowedBase)) {
     if (fs.existsSync(safePath)) {
